@@ -1,0 +1,1008 @@
+2024-11-10 13:50:21.706 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2024-11-10 13:50:21.729 [main] INFO  c.e.x.j.productdemoaop.ProductDemoAOPApplication - Starting ProductDemoAOPApplication using Java 17.0.12 with PID 44396 (D:\文档\WORD\大学\JavaEE\JavaEE-2-4\Exp4\7.SpringAOP\productdemoaop\target\classes started by X-BELIEVER in D:\文档\WORD\大学\JavaEE\JavaEE-2-4\Exp4\7.SpringAOP)
+2024-11-10 13:50:21.729 [main] DEBUG c.e.x.j.productdemoaop.ProductDemoAOPApplication - Running with Spring Boot v3.3.4, Spring v6.1.13
+2024-11-10 13:50:21.730 [main] INFO  c.e.x.j.productdemoaop.ProductDemoAOPApplication - No active profile set, falling back to 1 default profile: "default"
+2024-11-10 13:50:22.685 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-11-10 13:50:22.687 [main] INFO  org.apache.catalina.core.AprLifecycleListener - An older version [1.3.1] of the Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [2.0.5]
+2024-11-10 13:50:22.687 [main] INFO  org.apache.catalina.core.AprLifecycleListener - Loaded Apache Tomcat Native library [1.3.1] using APR version [1.7.4].
+2024-11-10 13:50:22.689 [main] INFO  org.apache.catalina.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 3.0.14 4 Jun 2024]
+2024-11-10 13:50:22.693 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2024-11-10 13:50:22.695 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2024-11-10 13:50:22.695 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-11-10 13:50:22.736 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-11-10 13:50:22.737 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 976 ms
+2024-11-10 13:50:23.489 [main] INFO  o.s.b.actuate.endpoint.web.EndpointLinksResolver - Exposing 14 endpoints beneath base path '/actuator'
+2024-11-10 13:50:23.519 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2024-11-10 13:50:23.530 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2024-11-10 13:50:23.538 [main] INFO  c.e.x.j.productdemoaop.ProductDemoAOPApplication - Started ProductDemoAOPApplication in 2.024 seconds (process running for 2.501)
+2024-11-10 13:50:23.693 [RMI TCP Connection(3)-192.168.222.1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-11-10 13:50:23.693 [RMI TCP Connection(3)-192.168.222.1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-11-10 13:50:23.694 [RMI TCP Connection(3)-192.168.222.1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2024-11-10 13:50:23.711 [RMI TCP Connection(2)-192.168.222.1] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2024-11-10 13:50:24.405 [http-nio-8080-exec-2] DEBUG c.e.x.j.p.m.m.P.getProductWithAll_join - ==>  Preparing: SELECT gp.`id` AS product_id, gp.`shop_id`, gp.`goods_id`, gp.`category_id`, gp.`template_id`, gp.`sku_sn`, gp.`name`, gp.`original_price`, gp.`weight`, gp.`barcode`, gp.`unit`, gp.`origin_place`, gp.`creator_id`, gp.`creator_name`, gp.`modifier_id`, gp.`modifier_name`, gp.`gmt_create`, gp.`gmt_modified`, gp.`status`, gp.`commission_ratio`, gp.`shop_logistic_id`, gp.`free_threshold`, gos.`id` AS sale_id, gos.`price`, gos.`begin_time`, gos.`end_time`, gos.`quantity`, gos.`max_quantity`, gos.`creator_id` AS sale_creator_id, gos.`creator_name` AS sale_creator_name, gos.`modifier_id` AS sale_modifier_id, gos.`modifier_name` AS sale_modifier_name, gos.`gmt_create` AS sale_gmt_create, gos.`gmt_modified` AS sale_gmt_modified, gpr.`id` AS related_product_id, gpr.`sku_sn` AS related_sku_sn, gpr.`name` AS related_name, gpr.`original_price` AS related_original_price, gpr.`weight` AS related_weight FROM goods_product gp LEFT OUTER JOIN goods_onsale gos ON gp.`id` = gos.`product_id` AND gos.`begin_time` <= NOW() AND gos.`end_time` > NOW() LEFT OUTER JOIN goods_product gpr ON gp.`goods_id` = gpr.`goods_id` AND gp.`id` <> gpr.`id` WHERE gp.`name` = ?
+2024-11-10 13:50:24.414 [http-nio-8080-exec-2] DEBUG c.e.x.j.p.m.m.P.getProductWithAll_join - ==> Parameters: 欢乐家岭南杂果罐头(String)
+2024-11-10 13:50:24.486 [http-nio-8080-exec-2] DEBUG c.e.x.j.p.m.m.P.getProductWithAll_join - <==      Total: 14
+2024-11-10 14:45:39.558 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2024-11-10 14:45:39.581 [main] INFO  c.e.x.j.productdemoaop.ProductDemoAOPApplication - Starting ProductDemoAOPApplication using Java 17.0.12 with PID 40432 (D:\文档\WORD\大学\JavaEE\实验\实验5\7.SpringAOP_new\productdemoaop\target\classes started by X-BELIEVER in D:\文档\WORD\大学\JavaEE\实验\实验5\7.SpringAOP_new)
+2024-11-10 14:45:39.582 [main] DEBUG c.e.x.j.productdemoaop.ProductDemoAOPApplication - Running with Spring Boot v3.3.4, Spring v6.1.13
+2024-11-10 14:45:39.582 [main] INFO  c.e.x.j.productdemoaop.ProductDemoAOPApplication - No active profile set, falling back to 1 default profile: "default"
+2024-11-10 14:45:40.051 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-11-10 14:45:40.084 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 29 ms. Found 3 JPA repository interfaces.
+2024-11-10 14:45:40.471 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-11-10 14:45:40.472 [main] INFO  org.apache.catalina.core.AprLifecycleListener - An older version [1.3.1] of the Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [2.0.5]
+2024-11-10 14:45:40.472 [main] INFO  org.apache.catalina.core.AprLifecycleListener - Loaded Apache Tomcat Native library [1.3.1] using APR version [1.7.4].
+2024-11-10 14:45:40.475 [main] INFO  org.apache.catalina.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 3.0.14 4 Jun 2024]
+2024-11-10 14:45:40.479 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2024-11-10 14:45:40.481 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2024-11-10 14:45:40.481 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-11-10 14:45:40.522 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-11-10 14:45:40.522 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 911 ms
+2024-11-10 14:45:40.738 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2024-11-10 14:45:41.454 [main] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-11-10 14:45:41.481 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-11-10 14:45:41.499 [main] INFO  o.hibernate.cache.internal.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-11-10 14:45:41.648 [main] INFO  o.s.o.j.persistenceunit.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-11-10 14:45:41.944 [main] INFO  o.h.e.t.jta.platform.internal.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-11-10 14:45:41.947 [main] INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-11-10 14:45:42.096 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'adminProductController' defined in file [D:\文档\WORD\大学\JavaEE\实验\实验5\7.SpringAOP_new\productdemoaop\target\classes\cn\edu\xmu\javaee\productdemoaop\controller\AdminProductController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'productService' defined in file [D:\文档\WORD\大学\JavaEE\实验\实验5\7.SpringAOP_new\productdemoaop\target\classes\cn\edu\xmu\javaee\productdemoaop\service\ProductService.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'productDao' defined in file [D:\文档\WORD\大学\JavaEE\实验\实验5\7.SpringAOP_new\productdemoaop\target\classes\cn\edu\xmu\javaee\productdemoaop\dao\ProductDao.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'productRepository' defined in cn.edu.xmu.javaee.productdemoaop.repository.ProductRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Not a managed type: class cn.edu.xmu.javaee.productdemoaop.mapper.generator.po.ProductPo
+2024-11-10 14:45:42.096 [main] INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-11-10 14:45:42.097 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closing ...
+2024-11-10 14:45:42.098 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2024-11-10 14:45:42.099 [main] INFO  org.apache.catalina.core.StandardService - Stopping service [Tomcat]
+2024-11-10 14:45:42.119 [main] INFO  o.s.b.a.logging.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-11-10 14:45:42.130 [main] ERROR org.springframework.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'adminProductController' defined in file [D:\文档\WORD\大学\JavaEE\实验\实验5\7.SpringAOP_new\productdemoaop\target\classes\cn\edu\xmu\javaee\productdemoaop\controller\AdminProductController.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'productService' defined in file [D:\文档\WORD\大学\JavaEE\实验\实验5\7.SpringAOP_new\productdemoaop\target\classes\cn\edu\xmu\javaee\productdemoaop\service\ProductService.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'productDao' defined in file [D:\文档\WORD\大学\JavaEE\实验\实验5\7.SpringAOP_new\productdemoaop\target\classes\cn\edu\xmu\javaee\productdemoaop\dao\ProductDao.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'productRepository' defined in cn.edu.xmu.javaee.productdemoaop.repository.ProductRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Not a managed type: class cn.edu.xmu.javaee.productdemoaop.mapper.generator.po.ProductPo
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:795)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:237)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1375)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1212)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:975)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:971)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:625)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:335)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1363)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1352)
+	at cn.edu.xmu.javaee.productdemoaop.ProductDemoAOPApplication.main(ProductDemoAOPApplication.java:13)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'productService' defined in file [D:\文档\WORD\大学\JavaEE\实验\实验5\7.SpringAOP_new\productdemoaop\target\classes\cn\edu\xmu\javaee\productdemoaop\service\ProductService.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'productDao' defined in file [D:\文档\WORD\大学\JavaEE\实验\实验5\7.SpringAOP_new\productdemoaop\target\classes\cn\edu\xmu\javaee\productdemoaop\dao\ProductDao.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'productRepository' defined in cn.edu.xmu.javaee.productdemoaop.repository.ProductRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Not a managed type: class cn.edu.xmu.javaee.productdemoaop.mapper.generator.po.ProductPo
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:795)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:237)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1375)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1212)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1443)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1353)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:904)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:782)
+	... 19 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'productDao' defined in file [D:\文档\WORD\大学\JavaEE\实验\实验5\7.SpringAOP_new\productdemoaop\target\classes\cn\edu\xmu\javaee\productdemoaop\dao\ProductDao.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'productRepository' defined in cn.edu.xmu.javaee.productdemoaop.repository.ProductRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Not a managed type: class cn.edu.xmu.javaee.productdemoaop.mapper.generator.po.ProductPo
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:795)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:237)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1375)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1212)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1443)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1353)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:904)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:782)
+	... 33 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'productRepository' defined in cn.edu.xmu.javaee.productdemoaop.repository.ProductRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Not a managed type: class cn.edu.xmu.javaee.productdemoaop.mapper.generator.po.ProductPo
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1806)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:337)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1443)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1353)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:904)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:782)
+	... 47 common frames omitted
+Caused by: java.lang.IllegalArgumentException: Not a managed type: class cn.edu.xmu.javaee.productdemoaop.mapper.generator.po.ProductPo
+	at org.hibernate.metamodel.model.domain.internal.JpaMetamodelImpl.managedType(JpaMetamodelImpl.java:194)
+	at org.hibernate.metamodel.model.domain.internal.MappingMetamodelImpl.managedType(MappingMetamodelImpl.java:469)
+	at org.hibernate.metamodel.model.domain.internal.MappingMetamodelImpl.managedType(MappingMetamodelImpl.java:99)
+	at org.springframework.data.jpa.repository.support.JpaMetamodelEntityInformation.<init>(JpaMetamodelEntityInformation.java:82)
+	at org.springframework.data.jpa.repository.support.JpaEntityInformationSupport.getEntityInformation(JpaEntityInformationSupport.java:69)
+	at org.springframework.data.jpa.repository.support.JpaRepositoryFactory.getEntityInformation(JpaRepositoryFactory.java:249)
+	at org.springframework.data.jpa.repository.support.JpaRepositoryFactory.getTargetRepository(JpaRepositoryFactory.java:214)
+	at org.springframework.data.jpa.repository.support.JpaRepositoryFactory.getTargetRepository(JpaRepositoryFactory.java:197)
+	at org.springframework.data.jpa.repository.support.JpaRepositoryFactory.getTargetRepository(JpaRepositoryFactory.java:1)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport.getRepository(RepositoryFactorySupport.java:317)
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.lambda$afterPropertiesSet$5(RepositoryFactoryBeanSupport.java:286)
+	at org.springframework.data.util.Lazy.getNullable(Lazy.java:135)
+	at org.springframework.data.util.Lazy.get(Lazy.java:113)
+	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.afterPropertiesSet(RepositoryFactoryBeanSupport.java:292)
+	at org.springframework.data.jpa.repository.support.JpaRepositoryFactoryBean.afterPropertiesSet(JpaRepositoryFactoryBean.java:132)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1853)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1802)
+	... 58 common frames omitted
+2024-11-10 14:47:36.032 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2024-11-10 14:47:36.055 [main] INFO  c.e.x.j.productdemoaop.ProductDemoAOPApplication - Starting ProductDemoAOPApplication using Java 17.0.12 with PID 50116 (D:\文档\WORD\大学\JavaEE\实验\实验5\7.SpringAOP_new\productdemoaop\target\classes started by X-BELIEVER in D:\文档\WORD\大学\JavaEE\实验\实验5\7.SpringAOP_new)
+2024-11-10 14:47:36.055 [main] DEBUG c.e.x.j.productdemoaop.ProductDemoAOPApplication - Running with Spring Boot v3.3.4, Spring v6.1.13
+2024-11-10 14:47:36.056 [main] INFO  c.e.x.j.productdemoaop.ProductDemoAOPApplication - No active profile set, falling back to 1 default profile: "default"
+2024-11-10 14:47:36.507 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-11-10 14:47:36.537 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 27 ms. Found 3 JPA repository interfaces.
+2024-11-10 14:47:36.907 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-11-10 14:47:36.908 [main] INFO  org.apache.catalina.core.AprLifecycleListener - An older version [1.3.1] of the Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [2.0.5]
+2024-11-10 14:47:36.909 [main] INFO  org.apache.catalina.core.AprLifecycleListener - Loaded Apache Tomcat Native library [1.3.1] using APR version [1.7.4].
+2024-11-10 14:47:36.910 [main] INFO  org.apache.catalina.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 3.0.14 4 Jun 2024]
+2024-11-10 14:47:36.914 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2024-11-10 14:47:36.916 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2024-11-10 14:47:36.916 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-11-10 14:47:36.944 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-11-10 14:47:36.944 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 858 ms
+2024-11-10 14:47:37.161 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2024-11-10 14:47:37.890 [main] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-11-10 14:47:37.916 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-11-10 14:47:37.932 [main] INFO  o.hibernate.cache.internal.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-11-10 14:47:38.081 [main] INFO  o.s.o.j.persistenceunit.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-11-10 14:47:38.645 [main] INFO  o.h.e.t.jta.platform.internal.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-11-10 14:47:38.646 [main] INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-11-10 14:47:38.827 [main] INFO  o.s.data.jpa.repository.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-11-10 14:47:39.034 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-11-10 14:47:39.463 [main] INFO  o.s.b.actuate.endpoint.web.EndpointLinksResolver - Exposing 14 endpoints beneath base path '/actuator'
+2024-11-10 14:47:39.494 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2024-11-10 14:47:39.497 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2024-11-10 14:47:39.498 [main] INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-11-10 14:47:39.499 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closing ...
+2024-11-10 14:47:39.501 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2024-11-10 14:47:39.516 [main] INFO  o.s.b.a.logging.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-11-10 14:47:39.525 [main] ERROR o.s.b.diagnostics.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
+2024-11-10 14:47:49.473 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2024-11-10 14:47:49.496 [main] INFO  c.e.x.j.productdemoaop.ProductDemoAOPApplication - Starting ProductDemoAOPApplication using Java 17.0.12 with PID 52916 (D:\文档\WORD\大学\JavaEE\实验\实验5\7.SpringAOP_new\productdemoaop\target\classes started by X-BELIEVER in D:\文档\WORD\大学\JavaEE\实验\实验5\7.SpringAOP_new)
+2024-11-10 14:47:49.496 [main] DEBUG c.e.x.j.productdemoaop.ProductDemoAOPApplication - Running with Spring Boot v3.3.4, Spring v6.1.13
+2024-11-10 14:47:49.497 [main] INFO  c.e.x.j.productdemoaop.ProductDemoAOPApplication - No active profile set, falling back to 1 default profile: "default"
+2024-11-10 14:47:49.961 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-11-10 14:47:49.993 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 28 ms. Found 3 JPA repository interfaces.
+2024-11-10 14:47:50.369 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-11-10 14:47:50.370 [main] INFO  org.apache.catalina.core.AprLifecycleListener - An older version [1.3.1] of the Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [2.0.5]
+2024-11-10 14:47:50.371 [main] INFO  org.apache.catalina.core.AprLifecycleListener - Loaded Apache Tomcat Native library [1.3.1] using APR version [1.7.4].
+2024-11-10 14:47:50.372 [main] INFO  org.apache.catalina.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 3.0.14 4 Jun 2024]
+2024-11-10 14:47:50.376 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2024-11-10 14:47:50.378 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2024-11-10 14:47:50.378 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-11-10 14:47:50.418 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-11-10 14:47:50.418 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 891 ms
+2024-11-10 14:47:50.635 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2024-11-10 14:47:51.326 [main] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-11-10 14:47:51.354 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-11-10 14:47:51.370 [main] INFO  o.hibernate.cache.internal.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-11-10 14:47:51.517 [main] INFO  o.s.o.j.persistenceunit.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-11-10 14:47:52.070 [main] INFO  o.h.e.t.jta.platform.internal.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-11-10 14:47:52.072 [main] INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-11-10 14:47:52.251 [main] INFO  o.s.data.jpa.repository.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-11-10 14:47:52.459 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-11-10 14:47:52.883 [main] INFO  o.s.b.actuate.endpoint.web.EndpointLinksResolver - Exposing 14 endpoints beneath base path '/actuator'
+2024-11-10 14:47:52.914 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2024-11-10 14:47:52.926 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2024-11-10 14:47:52.933 [main] INFO  c.e.x.j.productdemoaop.ProductDemoAOPApplication - Started ProductDemoAOPApplication in 3.653 seconds (process running for 4.107)
+2024-11-10 14:47:53.530 [RMI TCP Connection(2)-192.168.222.1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-11-10 14:47:53.530 [RMI TCP Connection(2)-192.168.222.1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-11-10 14:47:53.530 [RMI TCP Connection(2)-192.168.222.1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+2024-11-10 14:47:58.537 [http-nio-8080-exec-5] WARN  org.hibernate.engine.jdbc.spi.SqlExceptionHelper - SQL Error: 1146, SQLState: 42S02
+2024-11-10 14:47:58.537 [http-nio-8080-exec-5] ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper - Table 'oomall_demo.product' doesn't exist
+2024-11-10 14:47:58.546 [http-nio-8080-exec-5] ERROR cn.edu.xmu.javaee.core.aop.DaoAspect - doAround: obj = cn.edu.xmu.javaee.productdemoaop.dao.ProductDao@539570b8, method = findProductByName_JPA, e = {}
+org.springframework.dao.InvalidDataAccessResourceUsageException: JDBC exception executing SQL [SELECT * FROM product WHERE name = ?] [Table 'oomall_demo.product' doesn't exist] [n/a]; SQL [n/a]
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.convertHibernateAccessException(HibernateJpaDialect.java:277)
+	at org.springframework.orm.jpa.vendor.HibernateJpaDialect.translateExceptionIfPossible(HibernateJpaDialect.java:241)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.translateExceptionIfPossible(AbstractEntityManagerFactoryBean.java:550)
+	at org.springframework.dao.support.ChainedPersistenceExceptionTranslator.translateExceptionIfPossible(ChainedPersistenceExceptionTranslator.java:61)
+	at org.springframework.dao.support.DataAccessUtils.translateIfNecessary(DataAccessUtils.java:335)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:160)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:136)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:223)
+	at jdk.proxy2/jdk.proxy2.$Proxy148.findProductByName(Unknown Source)
+	at cn.edu.xmu.javaee.productdemoaop.dao.ProductDao.findProductByName_JPA(ProductDao.java:190)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:355)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:138)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768)
+	at org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint.proceed(MethodInvocationProceedingJoinPoint.java:89)
+	at cn.edu.xmu.javaee.core.aop.DaoAspect.doAround(DaoAspect.java:29)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethodWithGivenArgs(AbstractAspectJAdvice.java:637)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethod(AbstractAspectJAdvice.java:627)
+	at org.springframework.aop.aspectj.AspectJAroundAdvice.invoke(AspectJAroundAdvice.java:71)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:720)
+	at cn.edu.xmu.javaee.productdemoaop.dao.ProductDao$$SpringCGLIB$$0.findProductByName_JPA(<generated>)
+	at cn.edu.xmu.javaee.productdemoaop.service.ProductService.findProductByName_JPA(ProductService.java:102)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:355)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:716)
+	at cn.edu.xmu.javaee.productdemoaop.service.ProductService$$SpringCGLIB$$0.findProductByName_JPA(<generated>)
+	at cn.edu.xmu.javaee.productdemoaop.controller.ProductController.searchProductByName(ProductController.java:69)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:355)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768)
+	at org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint.proceed(MethodInvocationProceedingJoinPoint.java:102)
+	at cn.edu.xmu.javaee.core.aop.ControllerAspect.doAround(ControllerAspect.java:63)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethodWithGivenArgs(AbstractAspectJAdvice.java:637)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethod(AbstractAspectJAdvice.java:627)
+	at org.springframework.aop.aspectj.AspectJAroundAdvice.invoke(AspectJAroundAdvice.java:71)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:720)
+	at cn.edu.xmu.javaee.productdemoaop.controller.ProductController$$SpringCGLIB$$0.searchProductByName(<generated>)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:255)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:188)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:926)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:831)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:113)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:384)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:905)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+Caused by: org.hibernate.exception.SQLGrammarException: JDBC exception executing SQL [SELECT * FROM product WHERE name = ?] [Table 'oomall_demo.product' doesn't exist] [n/a]
+	at org.hibernate.exception.internal.SQLExceptionTypeDelegate.convert(SQLExceptionTypeDelegate.java:66)
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:58)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:108)
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:94)
+	at org.hibernate.sql.results.jdbc.internal.DeferredResultSetAccess.executeQuery(DeferredResultSetAccess.java:264)
+	at org.hibernate.sql.results.jdbc.internal.DeferredResultSetAccess.getResultSet(DeferredResultSetAccess.java:167)
+	at org.hibernate.sql.results.jdbc.internal.AbstractResultSetAccess.getMetaData(AbstractResultSetAccess.java:36)
+	at org.hibernate.sql.results.jdbc.internal.AbstractResultSetAccess.getColumnCount(AbstractResultSetAccess.java:52)
+	at org.hibernate.query.results.ResultSetMappingImpl.resolve(ResultSetMappingImpl.java:193)
+	at org.hibernate.sql.exec.internal.JdbcSelectExecutorStandardImpl.resolveJdbcValuesSource(JdbcSelectExecutorStandardImpl.java:327)
+	at org.hibernate.sql.exec.internal.JdbcSelectExecutorStandardImpl.doExecuteQuery(JdbcSelectExecutorStandardImpl.java:115)
+	at org.hibernate.sql.exec.internal.JdbcSelectExecutorStandardImpl.executeQuery(JdbcSelectExecutorStandardImpl.java:83)
+	at org.hibernate.sql.exec.spi.JdbcSelectExecutor.list(JdbcSelectExecutor.java:76)
+	at org.hibernate.sql.exec.spi.JdbcSelectExecutor.list(JdbcSelectExecutor.java:65)
+	at org.hibernate.query.sql.internal.NativeSelectQueryPlanImpl.performList(NativeSelectQueryPlanImpl.java:138)
+	at org.hibernate.query.sql.internal.NativeQueryImpl.doList(NativeQueryImpl.java:628)
+	at org.hibernate.query.spi.AbstractSelectionQuery.list(AbstractSelectionQuery.java:423)
+	at org.hibernate.query.spi.AbstractSelectionQuery.getSingleResult(AbstractSelectionQuery.java:555)
+	at org.springframework.data.jpa.repository.query.JpaQueryExecution$SingleEntityExecution.doExecute(JpaQueryExecution.java:223)
+	at org.springframework.data.jpa.repository.query.JpaQueryExecution.execute(JpaQueryExecution.java:92)
+	at org.springframework.data.jpa.repository.query.AbstractJpaQuery.doExecute(AbstractJpaQuery.java:152)
+	at org.springframework.data.jpa.repository.query.AbstractJpaQuery.execute(AbstractJpaQuery.java:140)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.doInvoke(RepositoryMethodInvoker.java:170)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.invoke(RepositoryMethodInvoker.java:158)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:169)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:148)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:70)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:379)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:138)
+	... 122 common frames omitted
+Caused by: java.sql.SQLSyntaxErrorException: Table 'oomall_demo.product' doesn't exist
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:112)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:114)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:987)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeQuery(ClientPreparedStatement.java:1055)
+	at com.alibaba.druid.pool.DruidPooledPreparedStatement.executeQuery(DruidPooledPreparedStatement.java:213)
+	at org.hibernate.sql.results.jdbc.internal.DeferredResultSetAccess.executeQuery(DeferredResultSetAccess.java:246)
+	... 150 common frames omitted
+2024-11-10 14:47:58.548 [http-nio-8080-exec-5] INFO  cn.edu.xmu.javaee.core.aop.ControllerAspect - doAround: BusinessException， errno = INTERNAL_SERVER_ERR
+2024-11-10 14:48:27.079 [SpringApplicationShutdownHook] INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-11-10 14:48:27.081 [SpringApplicationShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closing ...
+2024-11-10 14:48:27.082 [SpringApplicationShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2024-11-10 14:48:29.553 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2024-11-10 14:48:29.577 [main] INFO  c.e.x.j.productdemoaop.ProductDemoAOPApplication - Starting ProductDemoAOPApplication using Java 17.0.12 with PID 52468 (D:\文档\WORD\大学\JavaEE\实验\实验5\7.SpringAOP_new\productdemoaop\target\classes started by X-BELIEVER in D:\文档\WORD\大学\JavaEE\实验\实验5\7.SpringAOP_new)
+2024-11-10 14:48:29.577 [main] DEBUG c.e.x.j.productdemoaop.ProductDemoAOPApplication - Running with Spring Boot v3.3.4, Spring v6.1.13
+2024-11-10 14:48:29.577 [main] INFO  c.e.x.j.productdemoaop.ProductDemoAOPApplication - No active profile set, falling back to 1 default profile: "default"
+2024-11-10 14:48:30.032 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-11-10 14:48:30.064 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 27 ms. Found 3 JPA repository interfaces.
+2024-11-10 14:48:30.438 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-11-10 14:48:30.439 [main] INFO  org.apache.catalina.core.AprLifecycleListener - An older version [1.3.1] of the Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [2.0.5]
+2024-11-10 14:48:30.439 [main] INFO  org.apache.catalina.core.AprLifecycleListener - Loaded Apache Tomcat Native library [1.3.1] using APR version [1.7.4].
+2024-11-10 14:48:30.441 [main] INFO  org.apache.catalina.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 3.0.14 4 Jun 2024]
+2024-11-10 14:48:30.446 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2024-11-10 14:48:30.447 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2024-11-10 14:48:30.448 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-11-10 14:48:30.486 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-11-10 14:48:30.486 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 881 ms
+2024-11-10 14:48:30.699 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2024-11-10 14:48:31.399 [main] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-11-10 14:48:31.432 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-11-10 14:48:31.450 [main] INFO  o.hibernate.cache.internal.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-11-10 14:48:31.609 [main] INFO  o.s.o.j.persistenceunit.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-11-10 14:48:32.181 [main] INFO  o.h.e.t.jta.platform.internal.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-11-10 14:48:32.183 [main] INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-11-10 14:48:32.365 [main] INFO  o.s.data.jpa.repository.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-11-10 14:48:32.584 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-11-10 14:48:33.031 [main] INFO  o.s.b.actuate.endpoint.web.EndpointLinksResolver - Exposing 14 endpoints beneath base path '/actuator'
+2024-11-10 14:48:33.061 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2024-11-10 14:48:33.073 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2024-11-10 14:48:33.081 [main] INFO  c.e.x.j.productdemoaop.ProductDemoAOPApplication - Started ProductDemoAOPApplication in 3.718 seconds (process running for 4.185)
+2024-11-10 14:48:33.563 [RMI TCP Connection(3)-192.168.222.1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-11-10 14:48:33.563 [RMI TCP Connection(3)-192.168.222.1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-11-10 14:48:33.574 [RMI TCP Connection(3)-192.168.222.1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+2024-11-10 14:48:34.493 [http-nio-8080-exec-1] ERROR cn.edu.xmu.javaee.core.aop.DaoAspect - doAround: obj = cn.edu.xmu.javaee.productdemoaop.dao.ProductDao@4d2bcca8, method = findProductByName_JPA, e = {}
+java.lang.ClassCastException: class cn.edu.xmu.javaee.productdemoaop.mapper.manual.po.ProductAllPo cannot be cast to class java.util.List (cn.edu.xmu.javaee.productdemoaop.mapper.manual.po.ProductAllPo is in unnamed module of loader 'app'; java.util.List is in module java.base of loader 'bootstrap')
+	at cn.edu.xmu.javaee.productdemoaop.dao.ProductDao.findProductByName_JPA(ProductDao.java:202)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:355)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:138)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768)
+	at org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint.proceed(MethodInvocationProceedingJoinPoint.java:89)
+	at cn.edu.xmu.javaee.core.aop.DaoAspect.doAround(DaoAspect.java:29)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethodWithGivenArgs(AbstractAspectJAdvice.java:637)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethod(AbstractAspectJAdvice.java:627)
+	at org.springframework.aop.aspectj.AspectJAroundAdvice.invoke(AspectJAroundAdvice.java:71)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:720)
+	at cn.edu.xmu.javaee.productdemoaop.dao.ProductDao$$SpringCGLIB$$0.findProductByName_JPA(<generated>)
+	at cn.edu.xmu.javaee.productdemoaop.service.ProductService.findProductByName_JPA(ProductService.java:102)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:355)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:716)
+	at cn.edu.xmu.javaee.productdemoaop.service.ProductService$$SpringCGLIB$$0.findProductByName_JPA(<generated>)
+	at cn.edu.xmu.javaee.productdemoaop.controller.ProductController.searchProductByName(ProductController.java:69)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:355)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768)
+	at org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint.proceed(MethodInvocationProceedingJoinPoint.java:102)
+	at cn.edu.xmu.javaee.core.aop.ControllerAspect.doAround(ControllerAspect.java:63)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethodWithGivenArgs(AbstractAspectJAdvice.java:637)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethod(AbstractAspectJAdvice.java:627)
+	at org.springframework.aop.aspectj.AspectJAroundAdvice.invoke(AspectJAroundAdvice.java:71)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:720)
+	at cn.edu.xmu.javaee.productdemoaop.controller.ProductController$$SpringCGLIB$$0.searchProductByName(<generated>)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:255)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:188)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:926)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:831)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:113)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:384)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:905)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+2024-11-10 14:48:34.495 [http-nio-8080-exec-1] INFO  cn.edu.xmu.javaee.core.aop.ControllerAspect - doAround: BusinessException， errno = INTERNAL_SERVER_ERR
+2024-11-10 14:50:45.883 [SpringApplicationShutdownHook] INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-11-10 14:50:45.884 [SpringApplicationShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closing ...
+2024-11-10 14:50:45.886 [SpringApplicationShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2024-11-10 14:50:48.661 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2024-11-10 14:50:48.686 [main] INFO  c.e.x.j.productdemoaop.ProductDemoAOPApplication - Starting ProductDemoAOPApplication using Java 17.0.12 with PID 45204 (D:\文档\WORD\大学\JavaEE\实验\实验5\7.SpringAOP_new\productdemoaop\target\classes started by X-BELIEVER in D:\文档\WORD\大学\JavaEE\实验\实验5\7.SpringAOP_new)
+2024-11-10 14:50:48.687 [main] DEBUG c.e.x.j.productdemoaop.ProductDemoAOPApplication - Running with Spring Boot v3.3.4, Spring v6.1.13
+2024-11-10 14:50:48.688 [main] INFO  c.e.x.j.productdemoaop.ProductDemoAOPApplication - No active profile set, falling back to 1 default profile: "default"
+2024-11-10 14:50:49.149 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-11-10 14:50:49.180 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 28 ms. Found 3 JPA repository interfaces.
+2024-11-10 14:50:49.555 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-11-10 14:50:49.556 [main] INFO  org.apache.catalina.core.AprLifecycleListener - An older version [1.3.1] of the Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [2.0.5]
+2024-11-10 14:50:49.556 [main] INFO  org.apache.catalina.core.AprLifecycleListener - Loaded Apache Tomcat Native library [1.3.1] using APR version [1.7.4].
+2024-11-10 14:50:49.559 [main] INFO  org.apache.catalina.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 3.0.14 4 Jun 2024]
+2024-11-10 14:50:49.562 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2024-11-10 14:50:49.564 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2024-11-10 14:50:49.564 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-11-10 14:50:49.596 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-11-10 14:50:49.596 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 879 ms
+2024-11-10 14:50:49.813 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2024-11-10 14:50:50.526 [main] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-11-10 14:50:50.554 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-11-10 14:50:50.571 [main] INFO  o.hibernate.cache.internal.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-11-10 14:50:50.724 [main] INFO  o.s.o.j.persistenceunit.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-11-10 14:50:51.281 [main] INFO  o.h.e.t.jta.platform.internal.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-11-10 14:50:51.283 [main] INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-11-10 14:50:51.461 [main] INFO  o.s.data.jpa.repository.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-11-10 14:50:51.691 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-11-10 14:50:52.137 [main] INFO  o.s.b.actuate.endpoint.web.EndpointLinksResolver - Exposing 14 endpoints beneath base path '/actuator'
+2024-11-10 14:50:52.169 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2024-11-10 14:50:52.182 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2024-11-10 14:50:52.189 [main] INFO  c.e.x.j.productdemoaop.ProductDemoAOPApplication - Started ProductDemoAOPApplication in 3.722 seconds (process running for 4.193)
+2024-11-10 14:50:52.685 [RMI TCP Connection(3)-192.168.222.1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-11-10 14:50:52.685 [RMI TCP Connection(3)-192.168.222.1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-11-10 14:50:52.686 [RMI TCP Connection(3)-192.168.222.1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2024-11-10 14:52:29.125 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2024-11-10 14:52:29.151 [main] INFO  c.e.x.j.productdemoaop.ProductDemoAOPApplication - Starting ProductDemoAOPApplication using Java 17.0.12 with PID 53672 (D:\文档\WORD\大学\JavaEE\实验\实验5\7.SpringAOP_new\productdemoaop\target\classes started by X-BELIEVER in D:\文档\WORD\大学\JavaEE\实验\实验5\7.SpringAOP_new)
+2024-11-10 14:52:29.151 [main] DEBUG c.e.x.j.productdemoaop.ProductDemoAOPApplication - Running with Spring Boot v3.3.4, Spring v6.1.13
+2024-11-10 14:52:29.152 [main] INFO  c.e.x.j.productdemoaop.ProductDemoAOPApplication - No active profile set, falling back to 1 default profile: "default"
+2024-11-10 14:52:29.631 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-11-10 14:52:29.662 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 28 ms. Found 3 JPA repository interfaces.
+2024-11-10 14:52:30.060 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-11-10 14:52:30.062 [main] INFO  org.apache.catalina.core.AprLifecycleListener - An older version [1.3.1] of the Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [2.0.5]
+2024-11-10 14:52:30.062 [main] INFO  org.apache.catalina.core.AprLifecycleListener - Loaded Apache Tomcat Native library [1.3.1] using APR version [1.7.4].
+2024-11-10 14:52:30.064 [main] INFO  org.apache.catalina.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 3.0.14 4 Jun 2024]
+2024-11-10 14:52:30.068 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2024-11-10 14:52:30.070 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2024-11-10 14:52:30.071 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-11-10 14:52:30.100 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-11-10 14:52:30.100 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 916 ms
+2024-11-10 14:52:30.322 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2024-11-10 14:52:31.015 [main] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-11-10 14:52:31.045 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-11-10 14:52:31.062 [main] INFO  o.hibernate.cache.internal.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-11-10 14:52:31.211 [main] INFO  o.s.o.j.persistenceunit.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-11-10 14:52:31.780 [main] INFO  o.h.e.t.jta.platform.internal.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-11-10 14:52:31.782 [main] INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-11-10 14:52:31.968 [main] INFO  o.s.data.jpa.repository.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-11-10 14:52:32.184 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-11-10 14:52:32.615 [main] INFO  o.s.b.actuate.endpoint.web.EndpointLinksResolver - Exposing 14 endpoints beneath base path '/actuator'
+2024-11-10 14:52:32.647 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2024-11-10 14:52:32.661 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2024-11-10 14:52:32.669 [main] INFO  c.e.x.j.productdemoaop.ProductDemoAOPApplication - Started ProductDemoAOPApplication in 3.734 seconds (process running for 4.193)
+2024-11-10 14:52:33.160 [RMI TCP Connection(3)-192.168.222.1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-11-10 14:52:33.160 [RMI TCP Connection(3)-192.168.222.1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-11-10 14:52:33.164 [RMI TCP Connection(3)-192.168.222.1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 4 ms
+2024-11-10 14:52:38.399 [http-nio-8080-exec-1] DEBUG c.e.x.j.p.m.m.P.getProductWithAll_join - ==>  Preparing: SELECT gp.`id` AS product_id, gp.`shop_id`, gp.`goods_id`, gp.`category_id`, gp.`template_id`, gp.`sku_sn`, gp.`name`, gp.`original_price`, gp.`weight`, gp.`barcode`, gp.`unit`, gp.`origin_place`, gp.`creator_id`, gp.`creator_name`, gp.`modifier_id`, gp.`modifier_name`, gp.`gmt_create`, gp.`gmt_modified`, gp.`status`, gp.`commission_ratio`, gp.`shop_logistic_id`, gp.`free_threshold`, gos.`id` AS sale_id, gos.`price`, gos.`begin_time`, gos.`end_time`, gos.`quantity`, gos.`max_quantity`, gos.`creator_id` AS sale_creator_id, gos.`creator_name` AS sale_creator_name, gos.`modifier_id` AS sale_modifier_id, gos.`modifier_name` AS sale_modifier_name, gos.`gmt_create` AS sale_gmt_create, gos.`gmt_modified` AS sale_gmt_modified, gpr.`id` AS related_product_id, gpr.`sku_sn` AS related_sku_sn, gpr.`name` AS related_name, gpr.`original_price` AS related_original_price, gpr.`weight` AS related_weight FROM goods_product gp LEFT OUTER JOIN goods_onsale gos ON gp.`id` = gos.`product_id` AND gos.`begin_time` <= NOW() AND gos.`end_time` > NOW() LEFT OUTER JOIN goods_product gpr ON gp.`goods_id` = gpr.`goods_id` AND gp.`id` <> gpr.`id` WHERE gp.`name` = ?
+2024-11-10 14:52:38.408 [http-nio-8080-exec-1] DEBUG c.e.x.j.p.m.m.P.getProductWithAll_join - ==> Parameters: 欢乐家岭南杂果罐头(String)
+2024-11-10 14:52:38.485 [http-nio-8080-exec-1] DEBUG c.e.x.j.p.m.m.P.getProductWithAll_join - <==      Total: 14
+2024-11-10 14:53:41.792 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2024-11-10 14:53:41.816 [main] INFO  c.e.x.j.productdemoaop.ProductDemoAOPApplication - Starting ProductDemoAOPApplication using Java 17.0.12 with PID 43284 (D:\文档\WORD\大学\JavaEE\实验\实验5\7.SpringAOP_new\productdemoaop\target\classes started by X-BELIEVER in D:\文档\WORD\大学\JavaEE\实验\实验5\7.SpringAOP_new)
+2024-11-10 14:53:41.816 [main] DEBUG c.e.x.j.productdemoaop.ProductDemoAOPApplication - Running with Spring Boot v3.3.4, Spring v6.1.13
+2024-11-10 14:53:41.816 [main] INFO  c.e.x.j.productdemoaop.ProductDemoAOPApplication - No active profile set, falling back to 1 default profile: "default"
+2024-11-10 14:53:42.282 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-11-10 14:53:42.316 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 30 ms. Found 2 JPA repository interfaces.
+2024-11-10 14:53:42.719 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-11-10 14:53:42.720 [main] INFO  org.apache.catalina.core.AprLifecycleListener - An older version [1.3.1] of the Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [2.0.5]
+2024-11-10 14:53:42.720 [main] INFO  org.apache.catalina.core.AprLifecycleListener - Loaded Apache Tomcat Native library [1.3.1] using APR version [1.7.4].
+2024-11-10 14:53:42.722 [main] INFO  org.apache.catalina.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 3.0.14 4 Jun 2024]
+2024-11-10 14:53:42.727 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2024-11-10 14:53:42.729 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2024-11-10 14:53:42.729 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-11-10 14:53:42.759 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-11-10 14:53:42.759 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 913 ms
+2024-11-10 14:53:42.986 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2024-11-10 14:53:43.726 [main] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-11-10 14:53:43.755 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-11-10 14:53:43.773 [main] INFO  o.hibernate.cache.internal.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-11-10 14:53:43.929 [main] INFO  o.s.o.j.persistenceunit.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-11-10 14:53:44.491 [main] INFO  o.h.e.t.jta.platform.internal.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-11-10 14:53:44.493 [main] INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-11-10 14:53:44.672 [main] INFO  o.s.data.jpa.repository.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-11-10 14:53:44.882 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-11-10 14:53:45.302 [main] INFO  o.s.b.actuate.endpoint.web.EndpointLinksResolver - Exposing 14 endpoints beneath base path '/actuator'
+2024-11-10 14:53:45.332 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2024-11-10 14:53:45.344 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2024-11-10 14:53:45.352 [main] INFO  c.e.x.j.productdemoaop.ProductDemoAOPApplication - Started ProductDemoAOPApplication in 3.753 seconds (process running for 4.22)
+2024-11-10 14:53:45.803 [RMI TCP Connection(3)-192.168.222.1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-11-10 14:53:45.803 [RMI TCP Connection(3)-192.168.222.1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-11-10 14:53:45.804 [RMI TCP Connection(3)-192.168.222.1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2024-11-10 14:54:36.078 [http-nio-8080-exec-3] DEBUG c.e.x.j.p.m.m.P.getProductWithAll_join - ==>  Preparing: SELECT gp.`id` AS product_id, gp.`shop_id`, gp.`goods_id`, gp.`category_id`, gp.`template_id`, gp.`sku_sn`, gp.`name`, gp.`original_price`, gp.`weight`, gp.`barcode`, gp.`unit`, gp.`origin_place`, gp.`creator_id`, gp.`creator_name`, gp.`modifier_id`, gp.`modifier_name`, gp.`gmt_create`, gp.`gmt_modified`, gp.`status`, gp.`commission_ratio`, gp.`shop_logistic_id`, gp.`free_threshold`, gos.`id` AS sale_id, gos.`price`, gos.`begin_time`, gos.`end_time`, gos.`quantity`, gos.`max_quantity`, gos.`creator_id` AS sale_creator_id, gos.`creator_name` AS sale_creator_name, gos.`modifier_id` AS sale_modifier_id, gos.`modifier_name` AS sale_modifier_name, gos.`gmt_create` AS sale_gmt_create, gos.`gmt_modified` AS sale_gmt_modified, gpr.`id` AS related_product_id, gpr.`sku_sn` AS related_sku_sn, gpr.`name` AS related_name, gpr.`original_price` AS related_original_price, gpr.`weight` AS related_weight FROM goods_product gp LEFT OUTER JOIN goods_onsale gos ON gp.`id` = gos.`product_id` AND gos.`begin_time` <= NOW() AND gos.`end_time` > NOW() LEFT OUTER JOIN goods_product gpr ON gp.`goods_id` = gpr.`goods_id` AND gp.`id` <> gpr.`id` WHERE gp.`name` = ?
+2024-11-10 14:54:36.084 [http-nio-8080-exec-3] DEBUG c.e.x.j.p.m.m.P.getProductWithAll_join - ==> Parameters: 欢乐家岭南杂果罐头(String)
+2024-11-10 14:54:36.167 [http-nio-8080-exec-3] DEBUG c.e.x.j.p.m.m.P.getProductWithAll_join - <==      Total: 14
+2024-11-10 15:02:04.186 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2024-11-10 15:02:04.215 [main] INFO  c.e.x.j.productdemoaop.ProductDemoAOPApplication - Starting ProductDemoAOPApplication using Java 17.0.12 with PID 53792 (D:\文档\WORD\大学\JavaEE\实验\实验5\7.SpringAOP_new\productdemoaop\target\classes started by X-BELIEVER in D:\文档\WORD\大学\JavaEE\实验\实验5\7.SpringAOP_new)
+2024-11-10 15:02:04.215 [main] DEBUG c.e.x.j.productdemoaop.ProductDemoAOPApplication - Running with Spring Boot v3.3.4, Spring v6.1.13
+2024-11-10 15:02:04.215 [main] INFO  c.e.x.j.productdemoaop.ProductDemoAOPApplication - No active profile set, falling back to 1 default profile: "default"
+2024-11-10 15:02:04.791 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-11-10 15:02:04.829 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 33 ms. Found 2 JPA repository interfaces.
+2024-11-10 15:02:05.293 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-11-10 15:02:05.295 [main] INFO  org.apache.catalina.core.AprLifecycleListener - An older version [1.3.1] of the Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [2.0.5]
+2024-11-10 15:02:05.295 [main] INFO  org.apache.catalina.core.AprLifecycleListener - Loaded Apache Tomcat Native library [1.3.1] using APR version [1.7.4].
+2024-11-10 15:02:05.306 [main] INFO  org.apache.catalina.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 3.0.14 4 Jun 2024]
+2024-11-10 15:02:05.312 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2024-11-10 15:02:05.315 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2024-11-10 15:02:05.315 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-11-10 15:02:05.349 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-11-10 15:02:05.351 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1108 ms
+2024-11-10 15:02:05.597 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2024-11-10 15:02:06.397 [main] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-11-10 15:02:06.441 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-11-10 15:02:06.467 [main] INFO  o.hibernate.cache.internal.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-11-10 15:02:06.665 [main] INFO  o.s.o.j.persistenceunit.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-11-10 15:02:07.326 [main] INFO  o.h.e.t.jta.platform.internal.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-11-10 15:02:07.328 [main] INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-11-10 15:02:07.539 [main] INFO  o.s.data.jpa.repository.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-11-10 15:02:07.778 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-11-10 15:02:08.242 [main] INFO  o.s.b.actuate.endpoint.web.EndpointLinksResolver - Exposing 14 endpoints beneath base path '/actuator'
+2024-11-10 15:02:08.274 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2024-11-10 15:02:08.287 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2024-11-10 15:02:08.295 [main] INFO  c.e.x.j.productdemoaop.ProductDemoAOPApplication - Started ProductDemoAOPApplication in 4.332 seconds (process running for 4.853)
+2024-11-10 15:02:08.650 [RMI TCP Connection(2)-192.168.222.1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-11-10 15:02:08.650 [RMI TCP Connection(2)-192.168.222.1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-11-10 15:02:08.650 [RMI TCP Connection(2)-192.168.222.1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+2024-11-10 15:04:29.531 [SpringApplicationShutdownHook] INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-11-10 15:04:29.532 [SpringApplicationShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closing ...
+2024-11-10 15:04:29.535 [SpringApplicationShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2024-11-10 15:04:31.063 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2024-11-10 15:04:31.086 [main] INFO  c.e.x.j.productdemoaop.ProductDemoAOPApplication - Starting ProductDemoAOPApplication using Java 17.0.12 with PID 53688 (D:\文档\WORD\大学\JavaEE\实验\实验5\7.SpringAOP_new\productdemoaop\target\classes started by X-BELIEVER in D:\文档\WORD\大学\JavaEE\实验\实验5\7.SpringAOP_new)
+2024-11-10 15:04:31.086 [main] DEBUG c.e.x.j.productdemoaop.ProductDemoAOPApplication - Running with Spring Boot v3.3.4, Spring v6.1.13
+2024-11-10 15:04:31.087 [main] INFO  c.e.x.j.productdemoaop.ProductDemoAOPApplication - No active profile set, falling back to 1 default profile: "default"
+2024-11-10 15:04:31.550 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-11-10 15:04:31.583 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 28 ms. Found 2 JPA repository interfaces.
+2024-11-10 15:04:31.967 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-11-10 15:04:31.968 [main] INFO  org.apache.catalina.core.AprLifecycleListener - An older version [1.3.1] of the Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [2.0.5]
+2024-11-10 15:04:31.968 [main] INFO  org.apache.catalina.core.AprLifecycleListener - Loaded Apache Tomcat Native library [1.3.1] using APR version [1.7.4].
+2024-11-10 15:04:31.970 [main] INFO  org.apache.catalina.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 3.0.14 4 Jun 2024]
+2024-11-10 15:04:31.974 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2024-11-10 15:04:31.978 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2024-11-10 15:04:31.978 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-11-10 15:04:32.007 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-11-10 15:04:32.007 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 892 ms
+2024-11-10 15:04:32.223 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2024-11-10 15:04:32.946 [main] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-11-10 15:04:32.975 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-11-10 15:04:32.993 [main] INFO  o.hibernate.cache.internal.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-11-10 15:04:33.146 [main] INFO  o.s.o.j.persistenceunit.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-11-10 15:04:33.763 [main] INFO  o.h.e.t.jta.platform.internal.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-11-10 15:04:33.765 [main] INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-11-10 15:04:33.955 [main] INFO  o.s.data.jpa.repository.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-11-10 15:04:34.175 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-11-10 15:04:34.627 [main] INFO  o.s.b.actuate.endpoint.web.EndpointLinksResolver - Exposing 14 endpoints beneath base path '/actuator'
+2024-11-10 15:04:34.663 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2024-11-10 15:04:34.675 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2024-11-10 15:04:34.683 [main] INFO  c.e.x.j.productdemoaop.ProductDemoAOPApplication - Started ProductDemoAOPApplication in 3.81 seconds (process running for 4.278)
+2024-11-10 15:04:35.068 [RMI TCP Connection(3)-192.168.222.1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-11-10 15:04:35.068 [RMI TCP Connection(3)-192.168.222.1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-11-10 15:04:35.068 [RMI TCP Connection(3)-192.168.222.1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+2024-11-10 15:04:35.488 [http-nio-8080-exec-2] DEBUG cn.edu.xmu.javaee.productdemoaop.dao.ProductDao - findProductByName_manual: productList = [Product(id=1553, otherProduct=[Product(id=1580, otherProduct=[], onSaleList=[], skuSn=null, name=博益蚊子药, originalPrice=37987, weight=750, barcode=6925083631962, unit=桶, originPlace=广州, commissionRatio=null, freeThreshold=-1, status=0, creator=User(id=1, name=admin), modifier=User(id=null, name=null), gmtCreate=2021-11-11T13:12:48, gmtModified=null), Product(id=2014, otherProduct=[], onSaleList=[], skuSn=null, name=尖叫纤维运动饮料, originalPrice=86733, weight=550, barcode=6921168504022, unit=瓶, originPlace=浙江, commissionRatio=null, freeThreshold=-1, status=0, creator=User(id=1, name=admin), modifier=User(id=null, name=null), gmtCreate=2021-11-11T13:12:48, gmtModified=null), Product(id=2076, otherProduct=[], onSaleList=[], skuSn=null, name=松花鸭皮蛋(六枚), originalPrice=12628, weight=300, barcode=6943918900298, unit=盒, originPlace=尉氏, commissionRatio=null, freeThreshold=-1, status=0, creator=User(id=1, name=admin), modifier=User(id=null, name=null), gmtCreate=2021-11-11T13:12:48, gmtModified=null), Product(id=2213, otherProduct=[], onSaleList=[], skuSn=null, name=海天黄豆酱, originalPrice=15827, weight=340, barcode=6902265470267, unit=瓶, originPlace=广州, commissionRatio=null, freeThreshold=-1, status=0, creator=User(id=1, name=admin), modifier=User(id=null, name=null), gmtCreate=2021-11-11T13:12:48, gmtModified=null), Product(id=2629, otherProduct=[], onSaleList=[], skuSn=null, name=摩天真开心, originalPrice=53700, weight=100, barcode=6914843826915, unit=, originPlace=, commissionRatio=null, freeThreshold=-1, status=0, creator=User(id=1, name=admin), modifier=User(id=null, name=null), gmtCreate=2021-11-11T13:12:48, gmtModified=null), Product(id=3513, otherProduct=[], onSaleList=[], skuSn=null, name=玉丽粉底液, originalPrice=11779, weight=3015, barcode=6903263251353, unit=盒, originPlace=, commissionRatio=null, freeThreshold=-1, status=0, creator=User(id=1, name=admin), modifier=User(id=null, name=null), gmtCreate=2021-11-11T13:12:48, gmtModified=null), Product(id=4264, otherProduct=[], onSaleList=[], skuSn=null, name=肤歌幽兰除菌皂, originalPrice=32316, weight=118, barcode=6920174720259, unit=瓶, originPlace=, commissionRatio=null, freeThreshold=-1, status=0, creator=User(id=1, name=admin), modifier=User(id=null, name=null), gmtCreate=2021-11-11T13:12:48, gmtModified=null), Product(id=4303, otherProduct=[], onSaleList=[], skuSn=null, name=安记粉蒸肉50, originalPrice=10429, weight=24, barcode=6920233026742, unit=包, originPlace=, commissionRatio=null, freeThreshold=-1, status=0, creator=User(id=1, name=admin), modifier=User(id=null, name=null), gmtCreate=2021-11-11T13:12:48, gmtModified=null), Product(id=4373, otherProduct=[], onSaleList=[], skuSn=null, name=富华椰子糖, originalPrice=23920, weight=35, barcode=6920472107158, unit=包, originPlace=, commissionRatio=null, freeThreshold=-1, status=0, creator=User(id=1, name=admin), modifier=User(id=null, name=null), gmtCreate=2021-11-11T13:12:48, gmtModified=null), Product(id=4463, otherProduct=[], onSaleList=[], skuSn=null, name=神象特一粉25000, originalPrice=29033, weight=25000, barcode=6920755881621, unit=袋, originPlace=, commissionRatio=null, freeThreshold=-1, status=0, creator=User(id=1, name=admin), modifier=User(id=null, name=null), gmtCreate=2021-11-11T13:12:48, gmtModified=null), Product(id=4473, otherProduct=[], onSaleList=[], skuSn=null, name=肖家花椒粒, originalPrice=23798, weight=30, barcode=6920790980316, unit=包, originPlace=, commissionRatio=null, freeThreshold=-1, status=0, creator=User(id=1, name=admin), modifier=User(id=null, name=null), gmtCreate=2021-11-11T13:12:48, gmtModified=null), Product(id=4831, otherProduct=[], onSaleList=[], skuSn=null, name=伟龙美笛琴音壶, originalPrice=69141, weight=22, barcode=6921798223324, unit=把, originPlace=, commissionRatio=null, freeThreshold=-1, status=0, creator=User(id=1, name=admin), modifier=User(id=null, name=null), gmtCreate=2021-11-11T13:12:48, gmtModified=null), Product(id=5357, otherProduct=[], onSaleList=[], skuSn=null, name=汇源果汁醋, originalPrice=66791, weight=2008, barcode=6923555227637, unit=提, originPlace=, commissionRatio=null, freeThreshold=-1, status=0, creator=User(id=1, name=admin), modifier=User(id=null, name=null), gmtCreate=2021-11-11T13:12:48, gmtModified=null), Product(id=5454, otherProduct=[], onSaleList=[], skuSn=null, name=香格里鸡汁汤, originalPrice=85474, weight=150, barcode=6923775923487, unit=, originPlace=, commissionRatio=null, freeThreshold=-1, status=0, creator=User(id=1, name=admin), modifier=User(id=null, name=null), gmtCreate=2021-11-11T13:12:48, gmtModified=null)], onSaleList=[OnSale(id=4, price=1027, beginTime=2021-11-11T14:38:20, endTime=2030-02-19T14:38:20, quantity=32, maxQuantity=50, creator=User(id=1, name=admin), modifier=User(id=null, name=null), gmtCreate=2021-11-11T14:38:20, gmtModified=null)], skuSn=null, name=欢乐家岭南杂果罐头, originalPrice=3036, weight=700, barcode=6924254673381, unit=瓶, originPlace=广东, commissionRatio=null, freeThreshold=-1, status=0, creator=User(id=1, name=admin), modifier=User(id=null, name=null), gmtCreate=2021-11-11T13:12:48, gmtModified=null)]
+2024-11-10 15:05:02.767 [SpringApplicationShutdownHook] INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-11-10 15:05:02.769 [SpringApplicationShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closing ...
+2024-11-10 15:05:02.771 [SpringApplicationShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2024-11-10 15:09:00.824 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2024-11-10 15:09:00.849 [main] INFO  c.e.x.j.productdemoaop.ProductDemoAOPApplication - Starting ProductDemoAOPApplication using Java 17.0.12 with PID 36436 (D:\文档\WORD\大学\JavaEE\实验\实验5\7.SpringAOP_new\productdemoaop\target\classes started by X-BELIEVER in D:\文档\WORD\大学\JavaEE\实验\实验5\7.SpringAOP_new)
+2024-11-10 15:09:00.849 [main] DEBUG c.e.x.j.productdemoaop.ProductDemoAOPApplication - Running with Spring Boot v3.3.4, Spring v6.1.13
+2024-11-10 15:09:00.849 [main] INFO  c.e.x.j.productdemoaop.ProductDemoAOPApplication - No active profile set, falling back to 1 default profile: "default"
+2024-11-10 15:09:01.337 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-11-10 15:09:01.368 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 27 ms. Found 2 JPA repository interfaces.
+2024-11-10 15:09:01.754 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-11-10 15:09:01.755 [main] INFO  org.apache.catalina.core.AprLifecycleListener - An older version [1.3.1] of the Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [2.0.5]
+2024-11-10 15:09:01.755 [main] INFO  org.apache.catalina.core.AprLifecycleListener - Loaded Apache Tomcat Native library [1.3.1] using APR version [1.7.4].
+2024-11-10 15:09:01.758 [main] INFO  org.apache.catalina.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 3.0.14 4 Jun 2024]
+2024-11-10 15:09:01.762 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2024-11-10 15:09:01.764 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2024-11-10 15:09:01.765 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-11-10 15:09:01.805 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-11-10 15:09:01.805 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 925 ms
+2024-11-10 15:09:02.019 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2024-11-10 15:09:02.744 [main] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-11-10 15:09:02.772 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-11-10 15:09:02.789 [main] INFO  o.hibernate.cache.internal.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-11-10 15:09:02.940 [main] INFO  o.s.o.j.persistenceunit.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-11-10 15:09:03.520 [main] INFO  o.h.e.t.jta.platform.internal.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-11-10 15:09:03.522 [main] INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-11-10 15:09:03.705 [main] INFO  o.s.data.jpa.repository.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-11-10 15:09:03.915 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-11-10 15:09:04.339 [main] INFO  o.s.b.actuate.endpoint.web.EndpointLinksResolver - Exposing 14 endpoints beneath base path '/actuator'
+2024-11-10 15:09:04.369 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2024-11-10 15:09:04.382 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2024-11-10 15:09:04.390 [main] INFO  c.e.x.j.productdemoaop.ProductDemoAOPApplication - Started ProductDemoAOPApplication in 3.761 seconds (process running for 4.228)
+2024-11-10 15:09:04.873 [RMI TCP Connection(2)-192.168.222.1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-11-10 15:09:04.873 [RMI TCP Connection(2)-192.168.222.1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-11-10 15:09:04.874 [RMI TCP Connection(2)-192.168.222.1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2024-11-10 15:09:55.106 [SpringApplicationShutdownHook] INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-11-10 15:09:55.107 [SpringApplicationShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closing ...
+2024-11-10 15:09:55.109 [SpringApplicationShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
+2024-11-10 15:09:56.647 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2024-11-10 15:09:56.668 [main] INFO  c.e.x.j.productdemoaop.ProductDemoAOPApplication - Starting ProductDemoAOPApplication using Java 17.0.12 with PID 54764 (D:\文档\WORD\大学\JavaEE\实验\实验5\7.SpringAOP_new\productdemoaop\target\classes started by X-BELIEVER in D:\文档\WORD\大学\JavaEE\实验\实验5\7.SpringAOP_new)
+2024-11-10 15:09:56.668 [main] DEBUG c.e.x.j.productdemoaop.ProductDemoAOPApplication - Running with Spring Boot v3.3.4, Spring v6.1.13
+2024-11-10 15:09:56.669 [main] INFO  c.e.x.j.productdemoaop.ProductDemoAOPApplication - No active profile set, falling back to 1 default profile: "default"
+2024-11-10 15:09:57.131 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-11-10 15:09:57.162 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 27 ms. Found 2 JPA repository interfaces.
+2024-11-10 15:09:57.539 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-11-10 15:09:57.541 [main] INFO  org.apache.catalina.core.AprLifecycleListener - An older version [1.3.1] of the Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [2.0.5]
+2024-11-10 15:09:57.541 [main] INFO  org.apache.catalina.core.AprLifecycleListener - Loaded Apache Tomcat Native library [1.3.1] using APR version [1.7.4].
+2024-11-10 15:09:57.543 [main] INFO  org.apache.catalina.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 3.0.14 4 Jun 2024]
+2024-11-10 15:09:57.547 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2024-11-10 15:09:57.549 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2024-11-10 15:09:57.549 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-11-10 15:09:57.578 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-11-10 15:09:57.578 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 880 ms
+2024-11-10 15:09:57.785 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2024-11-10 15:09:58.511 [main] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-11-10 15:09:58.538 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-11-10 15:09:58.554 [main] INFO  o.hibernate.cache.internal.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-11-10 15:09:58.701 [main] INFO  o.s.o.j.persistenceunit.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-11-10 15:09:59.254 [main] INFO  o.h.e.t.jta.platform.internal.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-11-10 15:09:59.255 [main] INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-11-10 15:09:59.431 [main] INFO  o.s.data.jpa.repository.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-11-10 15:09:59.643 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-11-10 15:10:00.066 [main] INFO  o.s.b.actuate.endpoint.web.EndpointLinksResolver - Exposing 14 endpoints beneath base path '/actuator'
+2024-11-10 15:10:00.098 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2024-11-10 15:10:00.110 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2024-11-10 15:10:00.117 [main] INFO  c.e.x.j.productdemoaop.ProductDemoAOPApplication - Started ProductDemoAOPApplication in 3.659 seconds (process running for 4.12)
+2024-11-10 15:10:00.641 [RMI TCP Connection(2)-192.168.222.1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-11-10 15:10:00.641 [RMI TCP Connection(2)-192.168.222.1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-11-10 15:10:00.642 [RMI TCP Connection(2)-192.168.222.1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2024-11-10 15:11:59.016 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2024-11-10 15:11:59.038 [main] INFO  c.e.x.j.productdemoaop.ProductDemoAOPApplication - Starting ProductDemoAOPApplication using Java 17.0.12 with PID 45964 (D:\文档\WORD\大学\JavaEE\实验\实验5\7.SpringAOP_new\productdemoaop\target\classes started by X-BELIEVER in D:\文档\WORD\大学\JavaEE\实验\实验5\7.SpringAOP_new)
+2024-11-10 15:11:59.039 [main] DEBUG c.e.x.j.productdemoaop.ProductDemoAOPApplication - Running with Spring Boot v3.3.4, Spring v6.1.13
+2024-11-10 15:11:59.039 [main] INFO  c.e.x.j.productdemoaop.ProductDemoAOPApplication - No active profile set, falling back to 1 default profile: "default"
+2024-11-10 15:11:59.503 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-11-10 15:11:59.535 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 28 ms. Found 2 JPA repository interfaces.
+2024-11-10 15:11:59.912 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-11-10 15:11:59.914 [main] INFO  org.apache.catalina.core.AprLifecycleListener - An older version [1.3.1] of the Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [2.0.5]
+2024-11-10 15:11:59.914 [main] INFO  org.apache.catalina.core.AprLifecycleListener - Loaded Apache Tomcat Native library [1.3.1] using APR version [1.7.4].
+2024-11-10 15:11:59.917 [main] INFO  org.apache.catalina.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 3.0.14 4 Jun 2024]
+2024-11-10 15:11:59.923 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2024-11-10 15:11:59.925 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2024-11-10 15:11:59.925 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-11-10 15:11:59.959 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-11-10 15:11:59.959 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 889 ms
+2024-11-10 15:12:00.168 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2024-11-10 15:12:00.850 [main] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-11-10 15:12:00.876 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.5.3.Final
+2024-11-10 15:12:00.892 [main] INFO  o.hibernate.cache.internal.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2024-11-10 15:12:01.038 [main] INFO  o.s.o.j.persistenceunit.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-11-10 15:12:01.605 [main] INFO  o.h.e.t.jta.platform.internal.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-11-10 15:12:01.607 [main] INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-11-10 15:12:01.798 [main] INFO  o.s.data.jpa.repository.query.QueryEnhancerFactory - Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-11-10 15:12:02.025 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-11-10 15:12:02.490 [main] INFO  o.s.b.actuate.endpoint.web.EndpointLinksResolver - Exposing 14 endpoints beneath base path '/actuator'
+2024-11-10 15:12:02.522 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2024-11-10 15:12:02.539 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2024-11-10 15:12:02.547 [main] INFO  c.e.x.j.productdemoaop.ProductDemoAOPApplication - Started ProductDemoAOPApplication in 3.717 seconds (process running for 4.183)
+2024-11-10 15:12:03.033 [RMI TCP Connection(2)-192.168.222.1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-11-10 15:12:03.033 [RMI TCP Connection(2)-192.168.222.1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-11-10 15:12:03.034 [RMI TCP Connection(2)-192.168.222.1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+2024-11-10 15:13:37.883 [http-nio-8080-exec-6] ERROR o.a.c.c.C.[.[localhost].[/].[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.NullPointerException: Cannot invoke "java.util.List.stream()" because "productList" is null] with root cause
+java.lang.NullPointerException: Cannot invoke "java.util.List.stream()" because "productList" is null
+	at cn.edu.xmu.javaee.productdemoaop.controller.ProductController.searchProductByName(ProductController.java:71)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:355)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768)
+	at org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint.proceed(MethodInvocationProceedingJoinPoint.java:102)
+	at cn.edu.xmu.javaee.core.aop.ControllerAspect.doAround(ControllerAspect.java:63)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethodWithGivenArgs(AbstractAspectJAdvice.java:637)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethod(AbstractAspectJAdvice.java:627)
+	at org.springframework.aop.aspectj.AspectJAroundAdvice.invoke(AspectJAroundAdvice.java:71)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:720)
+	at cn.edu.xmu.javaee.productdemoaop.controller.ProductController$$SpringCGLIB$$0.searchProductByName(<generated>)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:255)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:188)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:926)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:831)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:113)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:384)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:905)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+2024-11-10 15:13:40.816 [http-nio-8080-exec-5] ERROR o.a.c.c.C.[.[localhost].[/].[dispatcherServlet] - Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.lang.NullPointerException: Cannot invoke "java.util.List.stream()" because "productList" is null] with root cause
+java.lang.NullPointerException: Cannot invoke "java.util.List.stream()" because "productList" is null
+	at cn.edu.xmu.javaee.productdemoaop.controller.ProductController.searchProductByName(ProductController.java:71)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:355)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768)
+	at org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint.proceed(MethodInvocationProceedingJoinPoint.java:102)
+	at cn.edu.xmu.javaee.core.aop.ControllerAspect.doAround(ControllerAspect.java:63)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethodWithGivenArgs(AbstractAspectJAdvice.java:637)
+	at org.springframework.aop.aspectj.AbstractAspectJAdvice.invokeAdviceMethod(AbstractAspectJAdvice.java:627)
+	at org.springframework.aop.aspectj.AspectJAroundAdvice.invoke(AspectJAroundAdvice.java:71)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:768)
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:720)
+	at cn.edu.xmu.javaee.productdemoaop.controller.ProductController$$SpringCGLIB$$0.searchProductByName(<generated>)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:255)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:188)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:926)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:831)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.ServerHttpObservationFilter.doFilterInternal(ServerHttpObservationFilter.java:113)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:384)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:905)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+2024-11-10 15:13:49.103 [http-nio-8080-exec-4] DEBUG c.e.x.j.p.m.m.P.getProductWithAll_join - ==>  Preparing: SELECT gp.`id` AS product_id, gp.`shop_id`, gp.`goods_id`, gp.`category_id`, gp.`template_id`, gp.`sku_sn`, gp.`name`, gp.`original_price`, gp.`weight`, gp.`barcode`, gp.`unit`, gp.`origin_place`, gp.`creator_id`, gp.`creator_name`, gp.`modifier_id`, gp.`modifier_name`, gp.`gmt_create`, gp.`gmt_modified`, gp.`status`, gp.`commission_ratio`, gp.`shop_logistic_id`, gp.`free_threshold`, gos.`id` AS sale_id, gos.`price`, gos.`begin_time`, gos.`end_time`, gos.`quantity`, gos.`max_quantity`, gos.`creator_id` AS sale_creator_id, gos.`creator_name` AS sale_creator_name, gos.`modifier_id` AS sale_modifier_id, gos.`modifier_name` AS sale_modifier_name, gos.`gmt_create` AS sale_gmt_create, gos.`gmt_modified` AS sale_gmt_modified, gpr.`id` AS related_product_id, gpr.`sku_sn` AS related_sku_sn, gpr.`name` AS related_name, gpr.`original_price` AS related_original_price, gpr.`weight` AS related_weight FROM goods_product gp LEFT OUTER JOIN goods_onsale gos ON gp.`id` = gos.`product_id` AND gos.`begin_time` <= NOW() AND gos.`end_time` > NOW() LEFT OUTER JOIN goods_product gpr ON gp.`goods_id` = gpr.`goods_id` AND gp.`id` <> gpr.`id` WHERE gp.`name` = ?
+2024-11-10 15:13:49.109 [http-nio-8080-exec-4] DEBUG c.e.x.j.p.m.m.P.getProductWithAll_join - ==> Parameters: 绍兴黄酒(String)
+2024-11-10 15:13:49.168 [http-nio-8080-exec-4] DEBUG c.e.x.j.p.m.m.P.getProductWithAll_join - <==      Total: 0
+2024-11-10 15:14:10.219 [http-nio-8080-exec-3] DEBUG c.e.x.j.p.m.m.P.getProductWithAll_join - ==>  Preparing: SELECT gp.`id` AS product_id, gp.`shop_id`, gp.`goods_id`, gp.`category_id`, gp.`template_id`, gp.`sku_sn`, gp.`name`, gp.`original_price`, gp.`weight`, gp.`barcode`, gp.`unit`, gp.`origin_place`, gp.`creator_id`, gp.`creator_name`, gp.`modifier_id`, gp.`modifier_name`, gp.`gmt_create`, gp.`gmt_modified`, gp.`status`, gp.`commission_ratio`, gp.`shop_logistic_id`, gp.`free_threshold`, gos.`id` AS sale_id, gos.`price`, gos.`begin_time`, gos.`end_time`, gos.`quantity`, gos.`max_quantity`, gos.`creator_id` AS sale_creator_id, gos.`creator_name` AS sale_creator_name, gos.`modifier_id` AS sale_modifier_id, gos.`modifier_name` AS sale_modifier_name, gos.`gmt_create` AS sale_gmt_create, gos.`gmt_modified` AS sale_gmt_modified, gpr.`id` AS related_product_id, gpr.`sku_sn` AS related_sku_sn, gpr.`name` AS related_name, gpr.`original_price` AS related_original_price, gpr.`weight` AS related_weight FROM goods_product gp LEFT OUTER JOIN goods_onsale gos ON gp.`id` = gos.`product_id` AND gos.`begin_time` <= NOW() AND gos.`end_time` > NOW() LEFT OUTER JOIN goods_product gpr ON gp.`goods_id` = gpr.`goods_id` AND gp.`id` <> gpr.`id` WHERE gp.`name` = ?
+2024-11-10 15:14:10.219 [http-nio-8080-exec-3] DEBUG c.e.x.j.p.m.m.P.getProductWithAll_join - ==> Parameters: 1000可比米饼(String)
+2024-11-10 15:14:10.287 [http-nio-8080-exec-3] DEBUG c.e.x.j.p.m.m.P.getProductWithAll_join - <==      Total: 4
+2024-11-10 15:14:28.530 [http-nio-8080-exec-9] DEBUG c.e.x.j.p.m.m.P.getProductWithAll_join - ==>  Preparing: SELECT gp.`id` AS product_id, gp.`shop_id`, gp.`goods_id`, gp.`category_id`, gp.`template_id`, gp.`sku_sn`, gp.`name`, gp.`original_price`, gp.`weight`, gp.`barcode`, gp.`unit`, gp.`origin_place`, gp.`creator_id`, gp.`creator_name`, gp.`modifier_id`, gp.`modifier_name`, gp.`gmt_create`, gp.`gmt_modified`, gp.`status`, gp.`commission_ratio`, gp.`shop_logistic_id`, gp.`free_threshold`, gos.`id` AS sale_id, gos.`price`, gos.`begin_time`, gos.`end_time`, gos.`quantity`, gos.`max_quantity`, gos.`creator_id` AS sale_creator_id, gos.`creator_name` AS sale_creator_name, gos.`modifier_id` AS sale_modifier_id, gos.`modifier_name` AS sale_modifier_name, gos.`gmt_create` AS sale_gmt_create, gos.`gmt_modified` AS sale_gmt_modified, gpr.`id` AS related_product_id, gpr.`sku_sn` AS related_sku_sn, gpr.`name` AS related_name, gpr.`original_price` AS related_original_price, gpr.`weight` AS related_weight FROM goods_product gp LEFT OUTER JOIN goods_onsale gos ON gp.`id` = gos.`product_id` AND gos.`begin_time` <= NOW() AND gos.`end_time` > NOW() LEFT OUTER JOIN goods_product gpr ON gp.`goods_id` = gpr.`goods_id` AND gp.`id` <> gpr.`id` WHERE gp.`name` = ?
+2024-11-10 15:14:28.530 [http-nio-8080-exec-9] DEBUG c.e.x.j.p.m.m.P.getProductWithAll_join - ==> Parameters: 1000可比米饼(String)
+2024-11-10 15:14:28.593 [http-nio-8080-exec-9] DEBUG c.e.x.j.p.m.m.P.getProductWithAll_join - <==      Total: 4
+2024-11-10 15:15:06.693 [http-nio-8080-exec-12] DEBUG c.e.x.j.p.m.m.ProductAllMapper.getProductWithAll - ==>  Preparing: SELECT `id`, `shop_id`, `goods_id`, `category_id`, `template_id`, `sku_sn`, `name`, `original_price`, `weight`, `barcode`, `unit`, `origin_place`, `creator_id`, `creator_name`, `modifier_id`, `modifier_name`, `gmt_create`, `gmt_modified`, `status`, `commission_ratio`, `shop_logistic_id`, `free_threshold` FROM goods_product WHERE ((`name` = ?))
+2024-11-10 15:15:06.693 [http-nio-8080-exec-12] DEBUG c.e.x.j.p.m.m.ProductAllMapper.getProductWithAll - ==> Parameters: 1000可比米饼(String)
+2024-11-10 15:15:06.750 [http-nio-8080-exec-12] DEBUG c.e.x.j.p.m.m.P.selectLastOnSaleByProductId - ====>  Preparing: select `id`, `product_id`, `price`, `begin_time`, `end_time`, `quantity`, `max_quantity`, `creator_id`, `creator_name`, `modifier_id`, `modifier_name`, `gmt_create`, `gmt_modified` from goods_onsale where `product_id` = ? and `begin_time` <= NOW() and `end_time` > NOW()
+2024-11-10 15:15:06.750 [http-nio-8080-exec-12] DEBUG c.e.x.j.p.m.m.P.selectLastOnSaleByProductId - ====> Parameters: 3929(Long)
+2024-11-10 15:15:06.801 [http-nio-8080-exec-12] DEBUG c.e.x.j.p.m.m.P.selectLastOnSaleByProductId - <====      Total: 1
+2024-11-10 15:15:06.801 [http-nio-8080-exec-12] DEBUG c.e.x.j.p.m.m.ProductAllMapper.selectOtherProduct - ====>  Preparing: select `id`, `goods_id`, `sku_sn`, `name`, `original_price`, `weight`, `barcode`, `unit`, `origin_place`, `creator_id`, `creator_name`, `modifier_id`, `modifier_name`, `gmt_create`, `gmt_modified` from goods_product where `goods_id` = ?
+2024-11-10 15:15:06.801 [http-nio-8080-exec-12] DEBUG c.e.x.j.p.m.m.ProductAllMapper.selectOtherProduct - ====> Parameters: 187(Long)
+2024-11-10 15:15:06.854 [http-nio-8080-exec-12] DEBUG c.e.x.j.p.m.m.ProductAllMapper.selectOtherProduct - <====      Total: 5
+2024-11-10 15:15:06.854 [http-nio-8080-exec-12] DEBUG c.e.x.j.p.m.m.ProductAllMapper.getProductWithAll - <==      Total: 1
+2024-11-10 15:15:09.242 [http-nio-8080-exec-13] DEBUG c.e.x.j.p.m.m.ProductAllMapper.getProductWithAll - ==>  Preparing: SELECT `id`, `shop_id`, `goods_id`, `category_id`, `template_id`, `sku_sn`, `name`, `original_price`, `weight`, `barcode`, `unit`, `origin_place`, `creator_id`, `creator_name`, `modifier_id`, `modifier_name`, `gmt_create`, `gmt_modified`, `status`, `commission_ratio`, `shop_logistic_id`, `free_threshold` FROM goods_product WHERE ((`name` = ?))
+2024-11-10 15:15:09.243 [http-nio-8080-exec-13] DEBUG c.e.x.j.p.m.m.ProductAllMapper.getProductWithAll - ==> Parameters: 1000可比米饼(String)
+2024-11-10 15:15:09.296 [http-nio-8080-exec-13] DEBUG c.e.x.j.p.m.m.P.selectLastOnSaleByProductId - ====>  Preparing: select `id`, `product_id`, `price`, `begin_time`, `end_time`, `quantity`, `max_quantity`, `creator_id`, `creator_name`, `modifier_id`, `modifier_name`, `gmt_create`, `gmt_modified` from goods_onsale where `product_id` = ? and `begin_time` <= NOW() and `end_time` > NOW()
+2024-11-10 15:15:09.296 [http-nio-8080-exec-13] DEBUG c.e.x.j.p.m.m.P.selectLastOnSaleByProductId - ====> Parameters: 3929(Long)
+2024-11-10 15:15:09.347 [http-nio-8080-exec-13] DEBUG c.e.x.j.p.m.m.P.selectLastOnSaleByProductId - <====      Total: 1
+2024-11-10 15:15:09.347 [http-nio-8080-exec-13] DEBUG c.e.x.j.p.m.m.ProductAllMapper.selectOtherProduct - ====>  Preparing: select `id`, `goods_id`, `sku_sn`, `name`, `original_price`, `weight`, `barcode`, `unit`, `origin_place`, `creator_id`, `creator_name`, `modifier_id`, `modifier_name`, `gmt_create`, `gmt_modified` from goods_product where `goods_id` = ?
+2024-11-10 15:15:09.347 [http-nio-8080-exec-13] DEBUG c.e.x.j.p.m.m.ProductAllMapper.selectOtherProduct - ====> Parameters: 187(Long)
+2024-11-10 15:15:09.399 [http-nio-8080-exec-13] DEBUG c.e.x.j.p.m.m.ProductAllMapper.selectOtherProduct - <====      Total: 5
+2024-11-10 15:15:09.399 [http-nio-8080-exec-13] DEBUG c.e.x.j.p.m.m.ProductAllMapper.getProductWithAll - <==      Total: 1
+2024-11-10 15:15:16.915 [http-nio-8080-exec-14] DEBUG c.e.x.j.p.m.m.P.getProductWithAll_join - ==>  Preparing: SELECT gp.`id` AS product_id, gp.`shop_id`, gp.`goods_id`, gp.`category_id`, gp.`template_id`, gp.`sku_sn`, gp.`name`, gp.`original_price`, gp.`weight`, gp.`barcode`, gp.`unit`, gp.`origin_place`, gp.`creator_id`, gp.`creator_name`, gp.`modifier_id`, gp.`modifier_name`, gp.`gmt_create`, gp.`gmt_modified`, gp.`status`, gp.`commission_ratio`, gp.`shop_logistic_id`, gp.`free_threshold`, gos.`id` AS sale_id, gos.`price`, gos.`begin_time`, gos.`end_time`, gos.`quantity`, gos.`max_quantity`, gos.`creator_id` AS sale_creator_id, gos.`creator_name` AS sale_creator_name, gos.`modifier_id` AS sale_modifier_id, gos.`modifier_name` AS sale_modifier_name, gos.`gmt_create` AS sale_gmt_create, gos.`gmt_modified` AS sale_gmt_modified, gpr.`id` AS related_product_id, gpr.`sku_sn` AS related_sku_sn, gpr.`name` AS related_name, gpr.`original_price` AS related_original_price, gpr.`weight` AS related_weight FROM goods_product gp LEFT OUTER JOIN goods_onsale gos ON gp.`id` = gos.`product_id` AND gos.`begin_time` <= NOW() AND gos.`end_time` > NOW() LEFT OUTER JOIN goods_product gpr ON gp.`goods_id` = gpr.`goods_id` AND gp.`id` <> gpr.`id` WHERE gp.`name` = ?
+2024-11-10 15:15:16.916 [http-nio-8080-exec-14] DEBUG c.e.x.j.p.m.m.P.getProductWithAll_join - ==> Parameters: 1000可比米饼(String)
+2024-11-10 15:15:16.979 [http-nio-8080-exec-14] DEBUG c.e.x.j.p.m.m.P.getProductWithAll_join - <==      Total: 4

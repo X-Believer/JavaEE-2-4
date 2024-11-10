@@ -1,0 +1,36 @@
+2024-10-29 21:51:28.152 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2024-10-29 21:51:28.184 [main] INFO  c.e.x.j.p.controller.AdminProductControllerTest - Starting AdminProductControllerTest using Java 20.0.2 with PID 33144 (started by X-BELIEVER in D:\文档\WORD\大学\JavaEE\实验\JavaEEPlatform\7.SpringAOP\productdemoaop)
+2024-10-29 21:51:28.185 [main] DEBUG c.e.x.j.p.controller.AdminProductControllerTest - Running with Spring Boot v3.3.4, Spring v6.1.13
+2024-10-29 21:51:28.185 [main] INFO  c.e.x.j.p.controller.AdminProductControllerTest - No active profile set, falling back to 1 default profile: "default"
+2024-10-29 21:51:31.624 [main] INFO  o.s.b.test.mock.web.SpringBootMockServletContext - Initializing Spring TestDispatcherServlet ''
+2024-10-29 21:51:31.625 [main] INFO  o.s.test.web.servlet.TestDispatcherServlet - Initializing Servlet ''
+2024-10-29 21:51:31.638 [main] INFO  o.s.b.actuate.endpoint.web.EndpointLinksResolver - Exposing 14 endpoints beneath base path '/actuator'
+2024-10-29 21:51:31.658 [main] INFO  o.s.test.web.servlet.TestDispatcherServlet - Completed initialization in 32 ms
+2024-10-29 21:51:31.725 [main] INFO  c.e.x.j.p.controller.AdminProductControllerTest - Started AdminProductControllerTest in 3.777 seconds (process running for 4.544)
+2024-10-29 21:51:31.826 [main] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2024-10-29 21:51:33.713 [main] DEBUG c.e.x.j.p.controller.AdminProductController - getProductById: id = 1580 
+2024-10-29 21:51:33.713 [main] DEBUG c.e.x.javaee.productdemoaop.service.ProductService - findProductById: id = 1580, all = false
+2024-10-29 21:51:34.057 [main] INFO  cn.edu.xmu.javaee.core.aop.ControllerAspect - doAround: BusinessException， errno = RESOURCE_ID_NOTEXIST
+2024-10-29 21:51:34.325 [main] DEBUG c.e.x.j.p.controller.AdminProductController - getProductById: id = 1580 
+2024-10-29 21:51:34.325 [main] DEBUG c.e.x.javaee.productdemoaop.service.ProductService - findProductById: id = 1580, all = false
+2024-10-29 21:51:34.378 [main] INFO  cn.edu.xmu.javaee.core.aop.ControllerAspect - doAround: BusinessException， errno = RESOURCE_ID_NOTEXIST
+2024-10-29 21:51:34.640 [main] INFO  cn.edu.xmu.javaee.core.aop.ControllerAspect - doAround: BusinessException， errno = RESOURCE_ID_NOTEXIST
+2024-10-29 21:51:34.979 [main] DEBUG c.e.x.j.p.controller.AdminProductController - getProductById: id = 5462 
+2024-10-29 21:51:34.979 [main] DEBUG c.e.x.javaee.productdemoaop.service.ProductService - findProductById: id = 5462, all = false
+2024-10-29 21:51:35.663 [main] DEBUG c.e.x.j.p.controller.AdminProductController - getProductById: id = 1550 
+2024-10-29 21:51:35.664 [main] DEBUG c.e.x.javaee.productdemoaop.service.ProductService - findProductById: id = 1550, all = false
+2024-10-29 21:51:35.874 [main] DEBUG c.e.x.j.p.controller.AdminProductController - getProductById: id = 1550122 
+2024-10-29 21:51:35.874 [main] DEBUG c.e.x.javaee.productdemoaop.service.ProductService - findProductById: id = 1550122, all = false
+2024-10-29 21:51:35.926 [main] INFO  cn.edu.xmu.javaee.core.aop.ControllerAspect - doAround: BusinessException， errno = RESOURCE_ID_NOTEXIST
+2024-10-29 21:51:37.225 [main] DEBUG c.e.x.j.p.controller.ProductController - getProductById: id = 1550 
+2024-10-29 21:51:37.225 [main] DEBUG c.e.x.javaee.productdemoaop.service.ProductService - findProductById: id = 1550, all = true
+2024-10-29 21:51:37.549 [main] DEBUG c.e.x.j.p.controller.ProductController - getProductById: id = 1550122 
+2024-10-29 21:51:37.550 [main] DEBUG c.e.x.javaee.productdemoaop.service.ProductService - findProductById: id = 1550122, all = true
+2024-10-29 21:51:37.603 [main] INFO  cn.edu.xmu.javaee.core.aop.ControllerAspect - doAround: BusinessException， errno = RESOURCE_ID_NOTEXIST
+2024-10-29 21:51:37.758 [main] DEBUG c.e.x.j.p.controller.ProductController - getProductById: id = 1574 
+2024-10-29 21:51:37.759 [main] DEBUG c.e.x.javaee.productdemoaop.service.ProductService - findProductById_manual: id = 1574
+2024-10-29 21:51:38.168 [main] DEBUG c.e.x.j.p.controller.ProductController - getProductById: id = 1550122 
+2024-10-29 21:51:38.169 [main] DEBUG c.e.x.javaee.productdemoaop.service.ProductService - findProductById_manual: id = 1550122
+2024-10-29 21:51:38.224 [main] INFO  cn.edu.xmu.javaee.core.aop.ControllerAspect - doAround: BusinessException， errno = RESOURCE_ID_NOTEXIST
+2024-10-29 21:51:38.341 [SpringApplicationShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closing ...
+2024-10-29 21:51:38.344 [SpringApplicationShutdownHook] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} closed
