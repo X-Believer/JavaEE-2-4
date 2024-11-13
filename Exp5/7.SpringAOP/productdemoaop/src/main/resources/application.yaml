@@ -20,10 +20,14 @@ spring:
     properties:
       hibernate:
         format_sql: true
+        bytecode:
+          provider=bytebuddy:
     logging:
       level:
         org.hibernate.SQL: DEBUG
         org.hibernate.type.descriptor.sql: TRACE
+
+
 
   datasource:
     #JDBC驱动

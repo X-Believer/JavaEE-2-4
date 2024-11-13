@@ -9,12 +9,16 @@ import org.springframework.data.repository.query.Param;
 import java.util.List;
 
 public interface ProductRepository extends JpaRepository<ProductPo, Long> {
-   @Query(value = "select * from goods_product productPo " +
+   /*@Query(value = "select * from goods_product productPo " +
            "where productPo.goods_id = :goodsId"
            ,nativeQuery = true)
+   List<ProductPo> getOtherProductList(@Param("goodsId") Long goodsId);*/
+   @Query("SELECT p FROM ProductPo p WHERE p.goodsId = :goodsId")
    List<ProductPo> getOtherProductList(@Param("goodsId") Long goodsId);
 
-   @Query(value = "SELECT * FROM goods_product WHERE name = :name", nativeQuery = true)
-   ProductPo findProductByName(@Param("name") String name);
 
+   /*@Query(value = "SELECT * FROM goods_product WHERE name = :name", nativeQuery = true)
+   ProductPo findProductByName(@Param("name") String name);*/
+   @Query(value = "SELECT p FROM ProductPo p WHERE p.name = :name")
+   ProductPo findProductByName(@Param("name") String name);
 }

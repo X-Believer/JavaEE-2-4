@@ -189,7 +189,7 @@ public class ProductDao {
     public List<Product> findProductByName_JPA(String name) {
         ProductPo product = productRepository.findProductByName(name);
         if (product == null) {
-            return null;
+            throw new BusinessException(ReturnNo.RESOURCE_ID_NOTEXIST, "产品名称不存在");
         }
         ProductAllPo productAllPo = new ProductAllPo(product.getId(),
                         productRepository.getOtherProductList(product.getGoodsId()), onSaleDao.getLatestOnSale_JPA(product.getId()),
@@ -201,8 +201,9 @@ public class ProductDao {
         List<Product> productList;
         List<ProductAllPo> productPoList = new ArrayList<>();
         productPoList.add(productAllPo);
+
         productList =  productPoList.stream().map(o->CloneFactory.copy(new Product(), o)).collect(Collectors.toList());
-        logger.debug("findProductByName_manual: productList = {}", productList);
+        logger.debug("findProductByName_jpa: productList = {}", productList);
         return productList;
     }
 
