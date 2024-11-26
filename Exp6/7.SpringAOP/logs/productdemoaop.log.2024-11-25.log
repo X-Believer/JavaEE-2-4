@@ -1,0 +1,127 @@
+2024-11-25 10:02:38.798 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2024-11-25 10:02:38.853 [main] INFO  c.e.x.j.productdemoaop.ProductDemoAOPApplication - Starting ProductDemoAOPApplication using Java 17.0.12 with PID 19504 (D:\文档\WORD\大学\JavaEE\JavaEE-2-4\Exp6\7.SpringAOP\productdemoaop\target\classes started by X-BELIEVER in D:\文档\WORD\大学\JavaEE\JavaEE-2-4\Exp6\7.SpringAOP)
+2024-11-25 10:02:38.853 [main] DEBUG c.e.x.j.productdemoaop.ProductDemoAOPApplication - Running with Spring Boot v3.3.4, Spring v6.1.13
+2024-11-25 10:02:38.854 [main] INFO  c.e.x.j.productdemoaop.ProductDemoAOPApplication - No active profile set, falling back to 1 default profile: "default"
+2024-11-25 10:02:41.000 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-11-25 10:02:41.003 [main] INFO  org.apache.catalina.core.AprLifecycleListener - An older version [1.3.1] of the Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [2.0.5]
+2024-11-25 10:02:41.003 [main] INFO  org.apache.catalina.core.AprLifecycleListener - Loaded Apache Tomcat Native library [1.3.1] using APR version [1.7.4].
+2024-11-25 10:02:41.009 [main] INFO  org.apache.catalina.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 3.0.14 4 Jun 2024]
+2024-11-25 10:02:41.018 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2024-11-25 10:02:41.022 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2024-11-25 10:02:41.022 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-11-25 10:02:41.089 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-11-25 10:02:41.089 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2184 ms
+2024-11-25 10:02:43.229 [main] INFO  o.s.b.actuate.endpoint.web.EndpointLinksResolver - Exposing 14 endpoints beneath base path '/actuator'
+2024-11-25 10:02:43.294 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2024-11-25 10:02:43.317 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2024-11-25 10:02:43.334 [main] INFO  c.e.x.j.productdemoaop.ProductDemoAOPApplication - Started ProductDemoAOPApplication in 4.97 seconds (process running for 6.061)
+2024-11-25 10:02:43.713 [RMI TCP Connection(3)-192.168.222.1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-11-25 10:02:43.713 [RMI TCP Connection(3)-192.168.222.1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-11-25 10:02:43.715 [RMI TCP Connection(3)-192.168.222.1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2024-11-25 10:02:43.745 [RMI TCP Connection(2)-192.168.222.1] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2024-11-25 10:15:36.583 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2024-11-25 10:15:36.631 [main] INFO  c.e.x.j.productdemoaop.ProductDemoAOPApplication - Starting ProductDemoAOPApplication using Java 17.0.12 with PID 19672 (D:\文档\WORD\大学\JavaEE\JavaEE-2-4\Exp6\7.SpringAOP\productdemoaop\target\classes started by X-BELIEVER in D:\文档\WORD\大学\JavaEE\JavaEE-2-4\Exp6\7.SpringAOP)
+2024-11-25 10:15:36.631 [main] DEBUG c.e.x.j.productdemoaop.ProductDemoAOPApplication - Running with Spring Boot v3.3.4, Spring v6.1.13
+2024-11-25 10:15:36.632 [main] INFO  c.e.x.j.productdemoaop.ProductDemoAOPApplication - No active profile set, falling back to 1 default profile: "default"
+2024-11-25 10:15:38.604 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-11-25 10:15:38.608 [main] INFO  org.apache.catalina.core.AprLifecycleListener - An older version [1.3.1] of the Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [2.0.5]
+2024-11-25 10:15:38.608 [main] INFO  org.apache.catalina.core.AprLifecycleListener - Loaded Apache Tomcat Native library [1.3.1] using APR version [1.7.4].
+2024-11-25 10:15:38.613 [main] INFO  org.apache.catalina.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 3.0.14 4 Jun 2024]
+2024-11-25 10:15:38.624 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2024-11-25 10:15:38.631 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2024-11-25 10:15:38.632 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-11-25 10:15:38.741 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-11-25 10:15:38.741 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2060 ms
+2024-11-25 10:15:40.877 [main] INFO  o.s.b.actuate.endpoint.web.EndpointLinksResolver - Exposing 14 endpoints beneath base path '/actuator'
+2024-11-25 10:15:40.948 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2024-11-25 10:15:40.970 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2024-11-25 10:15:40.988 [main] INFO  c.e.x.j.productdemoaop.ProductDemoAOPApplication - Started ProductDemoAOPApplication in 4.812 seconds (process running for 5.825)
+2024-11-25 10:15:41.792 [RMI TCP Connection(3)-192.168.222.1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-11-25 10:15:41.796 [RMI TCP Connection(3)-192.168.222.1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-11-25 10:15:41.799 [RMI TCP Connection(3)-192.168.222.1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2024-11-25 10:15:41.869 [RMI TCP Connection(2)-192.168.222.1] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2024-11-25 10:15:57.716 [http-nio-8080-exec-1] DEBUG c.e.x.j.p.controller.ProductController - getProductById: id = 5440
+2024-11-25 10:15:57.944 [http-nio-8080-exec-1] INFO  c.e.x.j.p.controller.ProductController - Cache MISS for product ID: 5440
+2024-11-25 10:15:58.013 [http-nio-8080-exec-1] DEBUG c.e.x.javaee.productdemoaop.service.ProductService - findProductById: id = 5440, all = true
+2024-11-25 10:15:58.035 [http-nio-8080-exec-1] DEBUG c.e.x.j.p.m.g.ProductPoMapper.selectByPrimaryKey - ==>  Preparing: select `id`, `shop_id`, `goods_id`, `category_id`, `template_id`, `sku_sn`, `name`, `original_price`, `weight`, `barcode`, `unit`, `origin_place`, `creator_id`, `creator_name`, `modifier_id`, `modifier_name`, `gmt_create`, `gmt_modified`, `status`, `commission_ratio`, `shop_logistic_id`, `free_threshold` from goods_product where `id` = ?
+2024-11-25 10:15:58.055 [http-nio-8080-exec-1] DEBUG c.e.x.j.p.m.g.ProductPoMapper.selectByPrimaryKey - ==> Parameters: 5440(Long)
+2024-11-25 10:15:58.145 [http-nio-8080-exec-1] DEBUG c.e.x.j.p.m.g.ProductPoMapper.selectByPrimaryKey - <==      Total: 1
+2024-11-25 10:15:58.162 [http-nio-8080-exec-1] DEBUG c.e.x.j.p.m.g.OnSalePoMapper.selectByExample - ==>  Preparing: SELECT `id`, `shop_id`, `product_id`, `price`, `begin_time`, `end_time`, `quantity`, `type`, `creator_id`, `creator_name`, `modifier_id`, `modifier_name`, `gmt_create`, `gmt_modified`, `max_quantity`, `invalid` FROM goods_onsale WHERE ((`product_id` = ? and `begin_time` <= ? and `end_time` >= ?)) ORDER BY end_time DESC
+2024-11-25 10:15:58.162 [http-nio-8080-exec-1] DEBUG c.e.x.j.p.m.g.OnSalePoMapper.selectByExample - ==> Parameters: 5440(Long), 2024-11-25T10:15:58.149358100(LocalDateTime), 2024-11-25T10:15:58.149358100(LocalDateTime)
+2024-11-25 10:15:58.221 [http-nio-8080-exec-1] DEBUG c.e.x.j.p.m.g.OnSalePoMapper.selectByExample - <==      Total: 1
+2024-11-25 10:15:58.230 [http-nio-8080-exec-1] DEBUG c.e.x.j.p.m.g.ProductPoMapper.selectByExample - ==>  Preparing: SELECT `id`, `shop_id`, `goods_id`, `category_id`, `template_id`, `sku_sn`, `name`, `original_price`, `weight`, `barcode`, `unit`, `origin_place`, `creator_id`, `creator_name`, `modifier_id`, `modifier_name`, `gmt_create`, `gmt_modified`, `status`, `commission_ratio`, `shop_logistic_id`, `free_threshold` FROM goods_product WHERE ((`goods_id` = ? and `id` <> ?))
+2024-11-25 10:15:58.231 [http-nio-8080-exec-1] DEBUG c.e.x.j.p.m.g.ProductPoMapper.selectByExample - ==> Parameters: 51(Long), 5440(Long)
+2024-11-25 10:15:58.291 [http-nio-8080-exec-1] DEBUG c.e.x.j.p.m.g.ProductPoMapper.selectByExample - <==      Total: 10
+2024-11-25 10:18:46.930 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2024-11-25 10:18:46.973 [main] INFO  c.e.x.j.productdemoaop.ProductDemoAOPApplication - Starting ProductDemoAOPApplication using Java 17.0.12 with PID 6216 (D:\文档\WORD\大学\JavaEE\JavaEE-2-4\Exp6\7.SpringAOP\productdemoaop\target\classes started by X-BELIEVER in D:\文档\WORD\大学\JavaEE\JavaEE-2-4\Exp6\7.SpringAOP)
+2024-11-25 10:18:46.974 [main] DEBUG c.e.x.j.productdemoaop.ProductDemoAOPApplication - Running with Spring Boot v3.3.4, Spring v6.1.13
+2024-11-25 10:18:46.975 [main] INFO  c.e.x.j.productdemoaop.ProductDemoAOPApplication - No active profile set, falling back to 1 default profile: "default"
+2024-11-25 10:18:48.879 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-11-25 10:18:48.883 [main] INFO  org.apache.catalina.core.AprLifecycleListener - An older version [1.3.1] of the Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [2.0.5]
+2024-11-25 10:18:48.883 [main] INFO  org.apache.catalina.core.AprLifecycleListener - Loaded Apache Tomcat Native library [1.3.1] using APR version [1.7.4].
+2024-11-25 10:18:48.887 [main] INFO  org.apache.catalina.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 3.0.14 4 Jun 2024]
+2024-11-25 10:18:48.896 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2024-11-25 10:18:48.900 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2024-11-25 10:18:48.900 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-11-25 10:18:48.978 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-11-25 10:18:48.978 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1949 ms
+2024-11-25 10:18:50.996 [main] INFO  o.s.b.actuate.endpoint.web.EndpointLinksResolver - Exposing 14 endpoints beneath base path '/actuator'
+2024-11-25 10:18:51.064 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2024-11-25 10:18:51.087 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2024-11-25 10:18:51.104 [main] INFO  c.e.x.j.productdemoaop.ProductDemoAOPApplication - Started ProductDemoAOPApplication in 4.593 seconds (process running for 5.577)
+2024-11-25 10:18:51.147 [http-nio-8080-exec-1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-11-25 10:18:51.147 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-11-25 10:18:51.149 [http-nio-8080-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2024-11-25 10:18:51.206 [http-nio-8080-exec-1] DEBUG c.e.x.j.p.controller.ProductController - getProductById: id = 5440
+2024-11-25 10:18:51.462 [RMI TCP Connection(1)-192.168.222.1] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2024-11-25 10:18:52.350 [http-nio-8080-exec-1] INFO  c.e.x.j.p.controller.ProductController - Cache HIT for product ID: 5440
+2024-11-25 10:18:59.387 [http-nio-8080-exec-2] DEBUG c.e.x.j.p.controller.ProductController - getProductById: id = 3030
+2024-11-25 10:18:59.542 [http-nio-8080-exec-2] INFO  c.e.x.j.p.controller.ProductController - Cache MISS for product ID: 3030
+2024-11-25 10:18:59.597 [http-nio-8080-exec-2] DEBUG c.e.x.javaee.productdemoaop.service.ProductService - findProductById: id = 3030, all = true
+2024-11-25 10:18:59.622 [http-nio-8080-exec-2] DEBUG c.e.x.j.p.m.g.ProductPoMapper.selectByPrimaryKey - ==>  Preparing: select `id`, `shop_id`, `goods_id`, `category_id`, `template_id`, `sku_sn`, `name`, `original_price`, `weight`, `barcode`, `unit`, `origin_place`, `creator_id`, `creator_name`, `modifier_id`, `modifier_name`, `gmt_create`, `gmt_modified`, `status`, `commission_ratio`, `shop_logistic_id`, `free_threshold` from goods_product where `id` = ?
+2024-11-25 10:18:59.641 [http-nio-8080-exec-2] DEBUG c.e.x.j.p.m.g.ProductPoMapper.selectByPrimaryKey - ==> Parameters: 3030(Long)
+2024-11-25 10:18:59.882 [http-nio-8080-exec-2] DEBUG c.e.x.j.p.m.g.ProductPoMapper.selectByPrimaryKey - <==      Total: 1
+2024-11-25 10:18:59.894 [http-nio-8080-exec-2] DEBUG c.e.x.j.p.m.g.OnSalePoMapper.selectByExample - ==>  Preparing: SELECT `id`, `shop_id`, `product_id`, `price`, `begin_time`, `end_time`, `quantity`, `type`, `creator_id`, `creator_name`, `modifier_id`, `modifier_name`, `gmt_create`, `gmt_modified`, `max_quantity`, `invalid` FROM goods_onsale WHERE ((`product_id` = ? and `begin_time` <= ? and `end_time` >= ?)) ORDER BY end_time DESC
+2024-11-25 10:18:59.895 [http-nio-8080-exec-2] DEBUG c.e.x.j.p.m.g.OnSalePoMapper.selectByExample - ==> Parameters: 3030(Long), 2024-11-25T10:18:59.883204100(LocalDateTime), 2024-11-25T10:18:59.883204100(LocalDateTime)
+2024-11-25 10:18:59.971 [http-nio-8080-exec-2] DEBUG c.e.x.j.p.m.g.OnSalePoMapper.selectByExample - <==      Total: 1
+2024-11-25 10:18:59.978 [http-nio-8080-exec-2] DEBUG c.e.x.j.p.m.g.ProductPoMapper.selectByExample - ==>  Preparing: SELECT `id`, `shop_id`, `goods_id`, `category_id`, `template_id`, `sku_sn`, `name`, `original_price`, `weight`, `barcode`, `unit`, `origin_place`, `creator_id`, `creator_name`, `modifier_id`, `modifier_name`, `gmt_create`, `gmt_modified`, `status`, `commission_ratio`, `shop_logistic_id`, `free_threshold` FROM goods_product WHERE ((`goods_id` = ? and `id` <> ?))
+2024-11-25 10:18:59.979 [http-nio-8080-exec-2] DEBUG c.e.x.j.p.m.g.ProductPoMapper.selectByExample - ==> Parameters: 261(Long), 3030(Long)
+2024-11-25 10:19:00.058 [http-nio-8080-exec-2] DEBUG c.e.x.j.p.m.g.ProductPoMapper.selectByExample - <==      Total: 8
+2024-11-25 10:19:23.917 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2024-11-25 10:19:23.959 [main] INFO  c.e.x.j.productdemoaop.ProductDemoAOPApplication - Starting ProductDemoAOPApplication using Java 17.0.12 with PID 27760 (D:\文档\WORD\大学\JavaEE\JavaEE-2-4\Exp6\7.SpringAOP\productdemoaop\target\classes started by X-BELIEVER in D:\文档\WORD\大学\JavaEE\JavaEE-2-4\Exp6\7.SpringAOP)
+2024-11-25 10:19:23.960 [main] DEBUG c.e.x.j.productdemoaop.ProductDemoAOPApplication - Running with Spring Boot v3.3.4, Spring v6.1.13
+2024-11-25 10:19:23.961 [main] INFO  c.e.x.j.productdemoaop.ProductDemoAOPApplication - No active profile set, falling back to 1 default profile: "default"
+2024-11-25 10:19:24.968 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode
+2024-11-25 10:19:24.971 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2024-11-25 10:19:25.009 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 23 ms. Found 0 Redis repository interfaces.
+2024-11-25 10:19:25.995 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-11-25 10:19:25.999 [main] INFO  org.apache.catalina.core.AprLifecycleListener - An older version [1.3.1] of the Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [2.0.5]
+2024-11-25 10:19:26.000 [main] INFO  org.apache.catalina.core.AprLifecycleListener - Loaded Apache Tomcat Native library [1.3.1] using APR version [1.7.4].
+2024-11-25 10:19:26.007 [main] INFO  org.apache.catalina.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 3.0.14 4 Jun 2024]
+2024-11-25 10:19:26.018 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2024-11-25 10:19:26.024 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2024-11-25 10:19:26.024 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-11-25 10:19:26.098 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-11-25 10:19:26.098 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2084 ms
+2024-11-25 10:19:28.237 [main] INFO  o.s.b.actuate.endpoint.web.EndpointLinksResolver - Exposing 14 endpoints beneath base path '/actuator'
+2024-11-25 10:19:28.304 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2024-11-25 10:19:28.327 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2024-11-25 10:19:28.343 [main] INFO  c.e.x.j.productdemoaop.ProductDemoAOPApplication - Started ProductDemoAOPApplication in 4.819 seconds (process running for 5.829)
+2024-11-25 10:19:28.913 [RMI TCP Connection(3)-192.168.222.1] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-11-25 10:19:28.914 [RMI TCP Connection(3)-192.168.222.1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-11-25 10:19:28.915 [RMI TCP Connection(3)-192.168.222.1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2024-11-25 10:19:28.942 [RMI TCP Connection(2)-192.168.222.1] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2024-11-25 10:19:31.118 [http-nio-8080-exec-1] DEBUG c.e.x.j.p.controller.ProductController - getProductById: id = 3030
+2024-11-25 10:19:31.946 [http-nio-8080-exec-1] INFO  c.e.x.j.p.controller.ProductController - Cache HIT for product ID: 3030
+2024-11-25 10:19:46.594 [http-nio-8080-exec-3] DEBUG c.e.x.j.p.controller.ProductController - getProductById: id = 2661
+2024-11-25 10:19:46.658 [http-nio-8080-exec-3] INFO  c.e.x.j.p.controller.ProductController - Cache MISS for product ID: 2661
+2024-11-25 10:19:46.730 [http-nio-8080-exec-3] DEBUG c.e.x.javaee.productdemoaop.service.ProductService - findProductById: id = 2661, all = true
+2024-11-25 10:19:46.751 [http-nio-8080-exec-3] DEBUG c.e.x.j.p.m.g.ProductPoMapper.selectByPrimaryKey - ==>  Preparing: select `id`, `shop_id`, `goods_id`, `category_id`, `template_id`, `sku_sn`, `name`, `original_price`, `weight`, `barcode`, `unit`, `origin_place`, `creator_id`, `creator_name`, `modifier_id`, `modifier_name`, `gmt_create`, `gmt_modified`, `status`, `commission_ratio`, `shop_logistic_id`, `free_threshold` from goods_product where `id` = ?
+2024-11-25 10:19:46.768 [http-nio-8080-exec-3] DEBUG c.e.x.j.p.m.g.ProductPoMapper.selectByPrimaryKey - ==> Parameters: 2661(Long)
+2024-11-25 10:19:46.848 [http-nio-8080-exec-3] DEBUG c.e.x.j.p.m.g.ProductPoMapper.selectByPrimaryKey - <==      Total: 1
+2024-11-25 10:19:46.863 [http-nio-8080-exec-3] DEBUG c.e.x.j.p.m.g.OnSalePoMapper.selectByExample - ==>  Preparing: SELECT `id`, `shop_id`, `product_id`, `price`, `begin_time`, `end_time`, `quantity`, `type`, `creator_id`, `creator_name`, `modifier_id`, `modifier_name`, `gmt_create`, `gmt_modified`, `max_quantity`, `invalid` FROM goods_onsale WHERE ((`product_id` = ? and `begin_time` <= ? and `end_time` >= ?)) ORDER BY end_time DESC
+2024-11-25 10:19:46.863 [http-nio-8080-exec-3] DEBUG c.e.x.j.p.m.g.OnSalePoMapper.selectByExample - ==> Parameters: 2661(Long), 2024-11-25T10:19:46.850618(LocalDateTime), 2024-11-25T10:19:46.850618(LocalDateTime)
+2024-11-25 10:19:46.931 [http-nio-8080-exec-3] DEBUG c.e.x.j.p.m.g.OnSalePoMapper.selectByExample - <==      Total: 1
+2024-11-25 10:19:46.939 [http-nio-8080-exec-3] DEBUG c.e.x.j.p.m.g.ProductPoMapper.selectByExample - ==>  Preparing: SELECT `id`, `shop_id`, `goods_id`, `category_id`, `template_id`, `sku_sn`, `name`, `original_price`, `weight`, `barcode`, `unit`, `origin_place`, `creator_id`, `creator_name`, `modifier_id`, `modifier_name`, `gmt_create`, `gmt_modified`, `status`, `commission_ratio`, `shop_logistic_id`, `free_threshold` FROM goods_product WHERE ((`goods_id` = ? and `id` <> ?))
+2024-11-25 10:19:46.939 [http-nio-8080-exec-3] DEBUG c.e.x.j.p.m.g.ProductPoMapper.selectByExample - ==> Parameters: 261(Long), 2661(Long)
+2024-11-25 10:19:47.003 [http-nio-8080-exec-3] DEBUG c.e.x.j.p.m.g.ProductPoMapper.selectByExample - <==      Total: 8

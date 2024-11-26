@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.edu.xmu.javaee.productdemoaop.mapper.manual.ProductAllMapper">
+
+    <!-- 定义 resultMap -->
+    <resultMap type="cn.edu.xmu.javaee.productdemoaop.mapper.manual.po.ProductAllPo" id="ProductAllMapper_join">
+
+        <id column="product_id" property="id" />
+        <result column="sku_sn" property="skuSn" />
+        <result column="name" property="name" />
+        <result column="original_price" property="originalPrice" />
+        <result column="weight" property="weight" />
+        <result column="barcode" property="barcode" />
+        <result column="unit" property="unit" />
+        <result column="origin_place" property="originPlace" />
+        <result column="commission_ratio" property="commissionRatio" />
+        <result column="free_threshold" property="freeThreshold" />
+        <result column="status" property="status" />
+        <result column="creator_id" property="creatorId" />
+        <result column="creator_name" property="creatorName" />
+        <result column="modifier_id" property="modifierId" />
+        <result column="modifier_name" property="modifierName" />
+        <result column="gmt_create" property="gmtCreate" />
+        <result column="gmt_modified" property="gmtModified" />
+
+
+        <collection property="onSaleList" ofType="cn.edu.xmu.javaee.productdemoaop.mapper.generator.po.OnSalePo">
+            <id column="sale_id" property="id" />
+            <result column="price" property="price" />
+            <result column="begin_time" property="beginTime" />
+            <result column="end_time" property="endTime" />
+            <result column="quantity" property="quantity" />
+            <result column="max_quantity" property="maxQuantity" />
+            <result column="sale_creator_id" property="creatorId" />
+            <result column="sale_creator_name" property="creatorName" />
+            <result column="sale_modifier_id" property="modifierId" />
+            <result column="sale_modifier_name" property="modifierName" />
+            <result column="sale_gmt_create" property="gmtCreate" />
+            <result column="sale_gmt_modified" property="gmtModified" />
+        </collection>
+
+        <collection property="otherProduct" ofType="cn.edu.xmu.javaee.productdemoaop.mapper.generator.po.ProductPo">
+            <id column="related_product_id" property="id" />
+            <result column="related_sku_sn" property="skuSn" />
+            <result column="related_name" property="name" />
+            <result column="related_original_price" property="originalPrice" />
+            <result column="related_weight" property="weight" />
+        </collection>
+    </resultMap>
+</mapper>
