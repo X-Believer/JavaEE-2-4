@@ -1,0 +1,39 @@
+2024-11-30 18:21:02.429 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 8.0.1.Final
+2024-11-30 18:21:02.462 [main] INFO  c.e.x.j.productdemoaop.ProductDemoAOPApplication - Starting ProductDemoAOPApplication using Java 17.0.12 with PID 27584 (D:\文档\WORD\大学\JavaEE\JavaEE-2-4\Exp6\7.SpringAOP\productdemoaop\target\classes started by X-BELIEVER in D:\文档\WORD\大学\JavaEE\JavaEE-2-4\Exp6\7.SpringAOP)
+2024-11-30 18:21:02.463 [main] DEBUG c.e.x.j.productdemoaop.ProductDemoAOPApplication - Running with Spring Boot v3.3.4, Spring v6.1.13
+2024-11-30 18:21:02.463 [main] INFO  c.e.x.j.productdemoaop.ProductDemoAOPApplication - No active profile set, falling back to 1 default profile: "default"
+2024-11-30 18:21:03.646 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2024-11-30 18:21:03.648 [main] INFO  org.apache.catalina.core.AprLifecycleListener - An older version [1.3.1] of the Apache Tomcat Native library is installed, while Tomcat recommends a minimum version of [2.0.5]
+2024-11-30 18:21:03.648 [main] INFO  org.apache.catalina.core.AprLifecycleListener - Loaded Apache Tomcat Native library [1.3.1] using APR version [1.7.4].
+2024-11-30 18:21:03.651 [main] INFO  org.apache.catalina.core.AprLifecycleListener - OpenSSL successfully initialized [OpenSSL 3.0.14 4 Jun 2024]
+2024-11-30 18:21:03.656 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+2024-11-30 18:21:03.657 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2024-11-30 18:21:03.658 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.30]
+2024-11-30 18:21:03.695 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-11-30 18:21:03.695 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1205 ms
+2024-11-30 18:21:04.863 [main] INFO  o.s.b.actuate.endpoint.web.EndpointLinksResolver - Exposing 14 endpoints beneath base path '/actuator'
+2024-11-30 18:21:04.899 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+2024-11-30 18:21:04.913 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2024-11-30 18:21:04.921 [main] INFO  c.e.x.j.productdemoaop.ProductDemoAOPApplication - Started ProductDemoAOPApplication in 2.742 seconds (process running for 3.279)
+2024-11-30 18:21:05.104 [RMI TCP Connection(2)-10.26.67.188] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-11-30 18:21:05.104 [RMI TCP Connection(2)-10.26.67.188] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-11-30 18:21:05.104 [RMI TCP Connection(2)-10.26.67.188] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+2024-11-30 18:21:05.126 [RMI TCP Connection(3)-10.26.67.188] INFO  com.alibaba.druid.pool.DruidDataSource - {dataSource-1} inited
+2024-11-30 18:21:19.556 [http-nio-8080-exec-1] DEBUG c.e.x.j.p.controller.ProductController - getProductById: id = 5440
+2024-11-30 18:21:19.767 [http-nio-8080-exec-1] INFO  c.e.x.j.p.controller.ProductController - Cache MISS for product ID: 5440
+2024-11-30 18:21:19.815 [http-nio-8080-exec-1] DEBUG c.e.x.javaee.productdemoaop.service.ProductService - findProductById: id = 5440, all = true
+2024-11-30 18:21:19.831 [http-nio-8080-exec-1] DEBUG c.e.x.j.p.m.g.ProductPoMapper.selectByPrimaryKey - ==>  Preparing: select `id`, `shop_id`, `goods_id`, `category_id`, `template_id`, `sku_sn`, `name`, `original_price`, `weight`, `barcode`, `unit`, `origin_place`, `creator_id`, `creator_name`, `modifier_id`, `modifier_name`, `gmt_create`, `gmt_modified`, `status`, `commission_ratio`, `shop_logistic_id`, `free_threshold` from goods_product where `id` = ?
+2024-11-30 18:21:19.839 [http-nio-8080-exec-1] DEBUG c.e.x.j.p.m.g.ProductPoMapper.selectByPrimaryKey - ==> Parameters: 5440(Long)
+2024-11-30 18:21:19.898 [http-nio-8080-exec-1] DEBUG c.e.x.j.p.m.g.ProductPoMapper.selectByPrimaryKey - <==      Total: 1
+2024-11-30 18:21:19.907 [http-nio-8080-exec-1] DEBUG c.e.x.j.p.m.g.OnSalePoMapper.selectByExample - ==>  Preparing: SELECT `id`, `shop_id`, `product_id`, `price`, `begin_time`, `end_time`, `quantity`, `type`, `creator_id`, `creator_name`, `modifier_id`, `modifier_name`, `gmt_create`, `gmt_modified`, `max_quantity`, `invalid` FROM goods_onsale WHERE ((`product_id` = ? and `begin_time` <= ? and `end_time` >= ?)) ORDER BY end_time DESC
+2024-11-30 18:21:19.907 [http-nio-8080-exec-1] DEBUG c.e.x.j.p.m.g.OnSalePoMapper.selectByExample - ==> Parameters: 5440(Long), 2024-11-30T18:21:19.900222600(LocalDateTime), 2024-11-30T18:21:19.900222600(LocalDateTime)
+2024-11-30 18:21:19.959 [http-nio-8080-exec-1] DEBUG c.e.x.j.p.m.g.OnSalePoMapper.selectByExample - <==      Total: 1
+2024-11-30 18:21:19.965 [http-nio-8080-exec-1] DEBUG c.e.x.j.p.m.g.ProductPoMapper.selectByExample - ==>  Preparing: SELECT `id`, `shop_id`, `goods_id`, `category_id`, `template_id`, `sku_sn`, `name`, `original_price`, `weight`, `barcode`, `unit`, `origin_place`, `creator_id`, `creator_name`, `modifier_id`, `modifier_name`, `gmt_create`, `gmt_modified`, `status`, `commission_ratio`, `shop_logistic_id`, `free_threshold` FROM goods_product WHERE ((`goods_id` = ? and `id` <> ?))
+2024-11-30 18:21:19.965 [http-nio-8080-exec-1] DEBUG c.e.x.j.p.m.g.ProductPoMapper.selectByExample - ==> Parameters: 51(Long), 5440(Long)
+2024-11-30 18:21:20.018 [http-nio-8080-exec-1] DEBUG c.e.x.j.p.m.g.ProductPoMapper.selectByExample - <==      Total: 10
+2024-11-30 18:21:25.932 [http-nio-8080-exec-2] DEBUG c.e.x.j.p.controller.ProductController - getProductById: id = 5440
+2024-11-30 18:21:26.003 [http-nio-8080-exec-2] INFO  c.e.x.j.p.controller.ProductController - Cache HIT for product ID: 5440
+2024-11-30 18:23:37.326 [http-nio-8080-exec-3] DEBUG c.e.x.j.p.controller.ProductController - getProductById: id = 2055
+2024-11-30 18:23:37.378 [http-nio-8080-exec-3] INFO  c.e.x.j.p.controller.ProductController - Cache HIT for product ID: 2055
+2024-11-30 18:32:00.314 [http-nio-8080-exec-9] DEBUG c.e.x.j.p.controller.ProductController - getProductById: id = 2055
+2024-11-30 18:32:00.364 [http-nio-8080-exec-9] INFO  c.e.x.j.p.controller.ProductController - Cache HIT for product ID: 2055
